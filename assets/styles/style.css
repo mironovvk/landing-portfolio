@@ -110,9 +110,6 @@ main {
     flex-grow: 1;
 }
 
-.home {
-    background-image: linear-gradient(90deg, #004abb .01%, #0051bb 16.01%, #0065bb 40.01%, #0071bb 51.01%, #0777c1 60.01%, #238fdb 100.01%);
-}
 
 .logo {
     max-width: 240px;
@@ -316,36 +313,39 @@ ul.navbar-nav {
 
 
 
-
+#hero{
+    background-image: linear-gradient(90deg, #004abb .01%, #0051bb 16.01%, #0065bb 40.01%, #0071bb 51.01%, #0777c1 60.01%, #238fdb 100.01%);
+}
 
 .entry-header {
-    margin: 70px auto -70px auto;
-    padding: 16px calc(16px * 1.5);
+    margin: 80px 0 -60px;
+    padding: 16px 0;
     position: relative;
     z-index: 1;
     display: grid;
     align-items: center;
-    grid-template-columns: 60% 1fr;
+    grid-template-columns: 56% 1fr;
     column-gap: calc(16px * 2);
     max-width: 1600px;
 }
 
 .entry-header-title-wrap {
-
+    color: var(--color-white);
+    padding: calc(22px * 2) calc(16px * 1.5);
 }
 
 .entry-header-intro {
-    margin: 0;
-    max-width: 95%;
     text-align: left;
     font-size: 2.5rem;
-    color: var(--color-white);
+}
+
+.entry-header-text {
+    font-size: 1.4rem;
 }
 
 .entry-header-image {
     position: relative;
     width: 100%;
-    max-width: 95%;
     margin: 0 auto;
     overflow: hidden;
     aspect-ratio: 1 / 1;
@@ -374,7 +374,6 @@ ul.navbar-nav {
     max-width: 100%;
     height: auto;
     top: 100%;
-    margin-top: -64px;
 }
 
 .curve-border path {
@@ -494,14 +493,18 @@ ul.navbar-nav {
 /* Большие устройства (десктопы, менее 1200px) */
 @media (max-width: 1199.98px) {
     .entry-header-intro {
-        font-size: 2rem;
+        font-size: 2.25rem;
     }
 }
 
 /* Средние устройства (планшеты, менее 992px) */
 @media (max-width: 991.98px) {
     .entry-header-intro {
-        font-size: 1.5rem;
+        font-size: 2rem;
+    }
+
+    .entry-header-text {
+        font-size: 1.2rem;
     }
 
     .icon {
@@ -621,6 +624,12 @@ ul.navbar-nav {
         font-size: 1.2rem;
         text-align: center;
         margin: auto;
+        padding-bottom: 10px;
+    }
+
+    .entry-header-text {
+        text-align: center;
+        margin: auto;
     }
 
     .entry-header-image {
@@ -633,7 +642,7 @@ ul.navbar-nav {
         box-shadow: none;
     }
 
-    .entry-header-image  img{
+    .entry-header-image img {
         position: relative;
         width: 100%;
         aspect-ratio: 4 / 3;
@@ -644,7 +653,7 @@ ul.navbar-nav {
 
 /* Очень маленькие устройства (портретные телефоны, менее 576px) */
 @media (max-width: 575.98px) {
-    .entry-header-intro {
+    .entry-header-text {
         font-size: 1rem;
     }
 }
