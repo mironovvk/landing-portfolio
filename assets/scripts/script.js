@@ -33,23 +33,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-
-// Обработчик клика по header
-header.addEventListener('click', () => {
-    if (window.scrollY <= topbarHeight && header.classList.contains('header_transparent')) {
-        header.classList.remove('header_transparent');
-        header.setAttribute('tabindex', '-1');
-        header.focus();
-    }
-});
-
-// Обработчик потери фокуса у header
-header.addEventListener('blur', () => {
-    if (window.scrollY <= topbarHeight && !header.classList.contains('header_transparent')) {
-        header.classList.add('header_transparent');
-    }
-});
-
 const burgerBtn = document.getElementById('burger-btn');
 const navCollapse = document.getElementById('collapseExample');
 
