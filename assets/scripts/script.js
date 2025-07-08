@@ -9,8 +9,6 @@ const topbarHeight = topbar.offsetHeight;
 function setHeaderOffset() {
     let topbarHeight = topbar.offsetHeight;
     header.style.top = `${topbarHeight}px`;
-    console.log(topbarHeight);
-    console.log(typeof(topbarHeight));
 }
 
 // Вызываем setHeaderOffset при загрузке страницы и при изменении размера окна
