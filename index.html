@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/styles/normalize.css">
     <link rel="stylesheet" href="./assets/styles/style.css">
+    <script src="https://unpkg.com/imask"></script>
     <title>ProgramWeb</title>
 </head>
 
@@ -71,7 +72,7 @@
         </div>
     </header>
     <main>
-        <section id="hero">
+        <section class="hero">
             <div class="container">
                 <div class="row">
                     <header class="entry-header">
@@ -187,6 +188,155 @@
                                     alt="Momentum Leader - Spring 2025">
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="section-title">
+                        <h2 class="ways_txt text-center">FAQs</h2>
+                    </div>
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <div class="accordion-header active">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Tenetur, error. <span class="accordion__icon"></span></div>
+                            <div class="accordion-content active">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
+                                nihil nulla ratione, quaerat soluta fuga laboriosam molestiae autem veniam repudiandae
+                                fugit, debitis accusamus aliquam quae adipisci voluptas. Eos molestiae error
+                                necessitatibus, aut corporis omnis sint voluptas reprehenderit illum ducimus sequi?
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Tenetur, error. <span class="accordion__icon"></span></div>
+                            <div class="accordion-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
+                                nihil nulla ratione, quaerat soluta fuga laboriosam molestiae autem veniam repudiandae
+                                fugit, debitis accusamus aliquam quae adipisci voluptas. Eos molestiae error
+                                necessitatibus, aut corporis omnis sint voluptas reprehenderit illum ducimus sequi?
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Tenetur, error. <span class="accordion__icon"></span></div>
+                            <div class="accordion-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
+                                nihil nulla ratione, quaerat soluta fuga laboriosam molestiae autem veniam repudiandae
+                                fugit, debitis accusamus aliquam quae adipisci voluptas. Eos molestiae error
+                                necessitatibus, aut corporis omnis sint voluptas reprehenderit illum ducimus sequi?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="section-title">
+                        <h2 class="ways_txt">Свяжитесь с нами</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab repellendus asperiores numquam
+                            unde libero est ea sit quisquam dolore maiores.</p>
+                    </div>
+                    <div class="form-container">
+                        <div id="form-message" class="form-message" style="display: none;"></div>
+                        <form method="post" class="feedback-form" id="feedback-form" action="" novalidate>
+                            <input type="hidden" id="" name="" value="">
+                            <div class="feedback-form__group">
+                                <input type="text" class="feedback-form__control" id="full_name" name="full_name"
+                                    placeholder="Семен Семенович Горбунков" minlength="10" maxlength="100"
+                                    data-type="fio" required>
+
+                                <label for="full_name" class="feedback-form__label">ФИО <span
+                                        class="form__required">*</span></label>
+                                <div class="hs-error-msgs">
+                                    <label class="error" for="full_name">Укажите ФИО контактного лица</label>
+                                </div>
+                            </div>
+                            <div class="feedback-form__fields">
+                                <div class="feedback-form__group">
+                                    <input type="tel" class="feedback-form__control" id="phone" name="phone"
+                                        placeholder="+7 (999) 999-99-99" maxlength="18" data-type="phone" required>
+
+                                    <label for="phone" class="feedback-form__label">Телефон <span
+                                            class="form__required">*</span></label>
+                                    <div class="hs-error-msgs">
+                                        <label class="error" for="phone">Укажите номер телефона в формате</label>
+                                    </div>
+                                </div>
+                                <div class="feedback-form__group">
+                                    <input type="email" class="feedback-form__control" id="email" name="email"
+                                        placeholder="usermail@mailservice.com" minlength="5" maxlength="100"
+                                        data-type="email" required>
+
+                                    <label for="email" class="feedback-form__label">E-mail <span
+                                            class="form__required">*</span></label>
+                                    <div class="hs-error-msgs">
+                                        <label class="error" for="email">Укажите адрес электронной почты</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="feedback-form__group">
+                                <select class="feedback-form__control filled" name="topic" id="topic" data-type="select"
+                                    required>
+                                    <option value="" disabled selected>Выберите тему обращения</option>
+                                    <option value="question">Вопрос</option>
+                                    <option value="suggestion">Предложение</option>
+                                    <option value="complaint">Жалоба</option>
+                                    <option value="thanks">Благодарность</option>
+                                    <option value="technical">Техническая проблема</option>
+                                    <option value="other">Другое</option>
+                                </select>
+                                <label for="topic" class="feedback-form__label">Тема обращения <span
+                                        class="form__required">*</span></label>
+                                <div class="hs-error-msgs">
+                                    <label class="error" for="topic">Пожалуйста, выберите тему обращения</label>
+                                </div>
+                            </div>
+                            <div class="feedback-form__group">
+                                <textarea id="message" name="message" class="feedback-form__control" rows="8"
+                                    placeholder="Обращение" minlength="10" maxlength="1000" data-type="message"
+                                    required></textarea>
+                                <label for="message" class="feedback-form__label">Обращение <span
+                                        class="form__required">*</span></label>
+                                <div class="hs-error-msgs">
+                                    <label class="error" for="message">Напишите текст обращения</label>
+                                </div>
+                            </div>
+                            <div class="feedback-form__fields captcha-fields">
+                                <div class="feedback-form__group">
+                                    <div class="captcha-box">
+                                        <img id="captchaImg"
+                                            src="https://maket.pl-llc.ru/bitrix/tools/captcha.php?captcha_sid=0af91e9a38c7c007e8632d6a301af13c"
+                                            alt="">
+                                        <div onclick="" id="reloadCaptcha">
+                                            <img src="https://maket.pl-llc.ru/local/templates/maketlab/frontend/assets/images/icons/refresh-icon.svg"
+                                                width="16" height="16" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="feedback-form__group">
+                                    <input type="text" class="feedback-form__control" id="captcha_word"
+                                        name="captcha_word" value="" minlength="5" maxlength="5" data-type="captcha"
+                                        required>
+
+                                    <label for="captcha_word" class="feedback-form__label">Captcha <span
+                                            class="form__required">*</span></label>
+                                    <div class="hs-error-msgs">
+                                        <label class="error" for="captcha_word">Укажите код</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="feedback-form__group">
+                                <label class="feedback-form__label-t">Отправляя данные, Вы принимаете <a href="/"
+                                        class="legal-link">Пользовательское
+                                        соглашение</a> и <a href="/" class="legal-link">Политику обработки персональных
+                                        данных.</a></label>
+                            </div>
+                            <div class="feedback-form__group">
+                                <button type="submit" class="form-btn btn-default">Отправить</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

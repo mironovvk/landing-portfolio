@@ -70,11 +70,13 @@
     --color-vivid-blue: #1e73be;
     --color-soft-white: #ffffffbf;
     --color-pale-blue: #dbe9ff;
+    --color-pale-blue-f: #f7f8fab9;
+    --color-light-blue: #f3f6fc;
+
+    --gradient-background: #f2f8fc;
 
     --footer-link-hover-color: #fff;
     --footer-bg-color: #282a2b;
-
-    --page-width: 130rem;
 }
 
 html,
@@ -130,6 +132,75 @@ main {
 .logo :hover {
     opacity: 0.7;
 }
+
+.btn-default {
+    line-height: 1 !important;
+    font-weight: 500;
+    font-size: 1rem;
+    display: inline-block;
+    position: relative;
+    outline: none;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 4px;
+    border: 1px solid #0095cd;
+    padding: 17px 20px;
+    /* background-color: #1e73be; */
+    color: #fff;
+    background-color: #0095cd;
+    width: fit-content;
+    box-shadow: none;
+    overflow: hidden;
+    cursor: pointer;
+    vertical-align: middle;
+    text-decoration: none;
+    letter-spacing: .4px;
+}
+
+.form-btn:not(.btn-transparent) {
+    background-color: #1e73be;
+}
+
+.form-btn:not(.btn-transparent):hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(23, 91, 150);
+    text-decoration: none;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(23, 91, 150);
+    border-image: initial;
+}
+
+.section-title {
+    text-align: center;
+    padding-bottom: 35px;
+}
+
+.section-title h2 {
+    font-size: calc(1.6rem + 0.5vw);
+    font-weight: 500;
+    color: rgb(14, 60, 95);
+    margin: 0px;
+}
+
+.ways_txt {
+    display: inline;
+    background: linear-gradient(to bottom, #ffffff80 0%, var(--color-vivid-blue) 98%);
+    background-size: 0px 3px;
+    background-repeat: no-repeat;
+    background-position: left 100%;
+    text-decoration: none;
+}
+
+.section-title p {
+    font-weight: 400;
+    font-size: 1.15rem;
+    margin: 30px auto 0;
+    width: 75%;
+}
+
+
+
 
 
 /* Стили топбара */
@@ -331,7 +402,7 @@ ul.navbar-nav {
 
 
 /* Стили первого блока */
-#hero {
+.hero {
     background-image: linear-gradient(90deg, #004abb .01%, #0051bb 16.01%, #0065bb 40.01%, #0071bb 51.01%, #0777c1 60.01%, #238fdb 100.01%);
 }
 
@@ -400,7 +471,7 @@ ul.navbar-nav {
 }
 
 
-/* Стили слайдера */
+/* стили для блока отзывов */
 .testimonial {
     background: #FFFFFF;
     background: radial-gradient(circle, #ffffff 20%, #dbe9ff 100%);
@@ -528,6 +599,301 @@ ul.navbar-nav {
 .swiper-pagination-bullet-active {
     background-color: var(--color-vivid-blue);
 }
+
+
+
+
+
+
+
+/* СТИЛИ ДЛЯ АККОРДЕОНА ВОПРОС ОТВЕТ */
+.accordion {
+    width: 70%;
+    margin: auto;
+    padding: 0;
+    --bs-accordion-border-radius: 0;
+}
+
+.accordion-item {
+    margin: 0 auto 1rem;
+    border: none !important;
+}
+
+.accordion-header {
+    cursor: pointer;
+    align-items: center;
+    appearance: none;
+    background: var(--gradient-background);
+    border: none;
+    color: var(--color-vivid-blue);
+    display: flex;
+    font-weight: 700;
+    min-height: 74px;
+    padding: 10px 56px 10px 26px;
+    position: relative;
+    text-align: left;
+    width: 100%;
+}
+
+.accordion__icon {
+    height: 21px;
+    width: 21px;
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%) rotate(0deg);
+    transition: transform 0.3s ease;
+}
+
+.accordion-header.active .accordion__icon {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+/* Линии иконки */
+.accordion__icon::before,
+.accordion__icon::after {
+    content: "";
+    position: absolute;
+    background: var(--color-vivid-blue);
+    transition: 0.3s;
+}
+
+.accordion__icon::before {
+    width: 100%;
+    height: 3px;
+    top: 9px;
+    left: 0;
+}
+
+.accordion__icon::after {
+    width: 3px;
+    height: 100%;
+    top: 0;
+    left: 9px;
+}
+
+.accordion-content {
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.accordion-content.active {
+    padding: 10px 56px 10px 26px;
+    display: block;
+}
+
+
+
+/* стили формы обратной связи */
+.form-container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.feedback-form {
+    width: 70%;
+    margin: auto;
+}
+
+.feedback-form__fields {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1rem;
+}
+
+.captcha-fields {
+    grid-template-columns: 280px 1fr 1fr;
+    grid-column-gap: 2rem;
+}
+
+.feedback-form__group {
+    position: relative;
+    width: 100%;
+    transition: box-shadow .1s ease;
+    margin-bottom: 1.6rem;
+}
+
+.gropu_check {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 1.4rem;
+}
+
+.feedback-form__label {
+    font-size: 1.2rem;
+    left: 2rem;
+    top: 1rem;
+    margin-bottom: 0;
+    pointer-events: none;
+    position: absolute;
+    transition: top .1s ease, font-size .1s ease;
+    color: var(--color-black), 75;
+}
+
+.feedback-form__label-t {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    position: relative;
+    color: var(--color-black), 75;
+}
+
+.feedback-form__control {
+    flex-grow: 1;
+    text-align: left;
+    padding: 1.2rem 1.4rem .8rem 1.6rem;
+    transition: box-shadow .1s ease;
+
+    appearance: none;
+    /* background-color: var(--color-pale-blue-f); */
+    background-color: var(--color-white);
+    color: var(--color-black);
+    font-size: 1.2rem;
+    width: 100%;
+    box-sizing: border-box;
+    transition: box-shadow .1s ease;
+    border-radius: 0;
+    min-width: 7rem;
+    position: relative;
+
+
+    border: 1.4px solid #cdcdcd;
+    border-radius: 6px;
+    box-shadow: none;
+    color: #646464b3;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+}
+
+.feedback-form__control:focus {
+    background-color: var(--color-white);
+    border-color: var(--color-vivid-blue);
+    /* border-width: 2px; */
+}
+
+.feedback-form__control:focus+.feedback-form__label,
+.feedback-form__control.filled+.feedback-form__label {
+    font-size: 1rem;
+    top: -.6rem;
+    left: 1.6rem;
+    background-color: var(--color-white);
+    color: var(--color-vivid-blue);
+    padding: 2px 4px;
+    outline: none;
+}
+
+.feedback-form__control::placeholder {
+
+    color: transparent;
+}
+
+.feedback-form__control:focus::placeholder {
+    color: #646464b3;
+}
+
+.feedback-form select {
+    padding: 1.6rem 1.4rem 1.6rem 1.6rem;
+}
+
+.feedback-form textarea {
+    height: auto;
+    resize: none;
+}
+
+.form__required {
+    color: var(--color-vivid-blue);
+    font-weight: 500;
+}
+
+.legal-link {
+    color: var(--color-vivid-blue);
+}
+
+.captcha-box {
+    display: flex;
+    align-items: end;
+    column-gap: 1rem;
+    height: 100%;
+    width: 100%;
+}
+
+img#captchaImg {
+    background-color: #e4eeff;
+    border-radius: 6px;
+    padding: 0;
+    margin: 0;
+    min-height: 50px;
+    max-width: 240px;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+    bottom: 0;
+}
+
+.invalid-field {
+    border-color: red !important;
+}
+
+.hs-error-msgs {
+    display: none;
+}
+
+.invalid-field~.hs-error-msgs {
+    display: block;
+}
+
+.hs-error-msgs {
+    margin: 0;
+    top: 0;
+    right: 0;
+    padding: .6rem;
+    position: absolute;
+    right: 6px;
+    font-size: 13px;
+    color: #ff3535;
+    text-align: left;
+    text-align: right;
+}
+
+.hs-error-msgs a,
+.hs-error-msgs label {
+    color: #dc4444;
+    font-size: 12px !important;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+}
+
+
+
+.form-message {
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+    padding: 25px 0;
+    display: none;
+    position: fixed;
+    z-index: 1300;
+    top: 0;
+    left: 0;
+}
+
+.form-message.success {
+    color: #ffffff;
+    background-color: #30942d;
+}
+
+.form-message.error {
+    color: #ffffff;
+    background-color: #da3232;
+}
+
+
 
 
 
@@ -820,6 +1186,10 @@ ul.navbar-nav {
         height: 100%;
         width: 100%;
         border: 2px solid white;
+    }
+
+    .feedback-form__fields {
+        display: block;
     }
 }
 
