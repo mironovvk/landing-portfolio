@@ -73,13 +73,13 @@ const swiper = new Swiper(".mySwiper", {
 
 // БЛОК С АККОРДЕОНОМ
 document.querySelectorAll('.accordion-header').forEach(header => {
-    header.addEventListener('click', () => {
-        const content = header.nextElementSibling;
-        const icon = header.querySelector('.accordion__icon');
+  header.addEventListener('click', () => {
+    const content = header.nextElementSibling;
+    const icon = header.querySelector('.accordion__icon');
 
-        header.classList.toggle('active');
-        content.classList.toggle('active');
-    });
+    header.classList.toggle('active');
+    content.classList.toggle('active');
+  });
 });
 
 

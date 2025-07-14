@@ -112,6 +112,10 @@ main {
     flex-grow: 1;
 }
 
+main>section {
+    margin-bottom: 6rem;
+}
+
 
 .logo {
     max-width: 240px;
@@ -179,6 +183,8 @@ main {
 .section-title h2 {
     font-size: calc(1.6rem + 0.5vw);
     font-weight: 500;
+    font-weight: 700;
+    font-size: 2.4rem;
     color: rgb(14, 60, 95);
     margin: 0px;
 }
@@ -197,6 +203,7 @@ main {
     font-size: 1.15rem;
     margin: 30px auto 0;
     width: 75%;
+    color: var(--color-deep-indigo);
 }
 
 
