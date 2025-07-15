@@ -478,6 +478,153 @@ ul.navbar-nav {
 }
 
 
+
+
+/* Стили блока с преимуществами */
+#advantages-block {
+    background: radial-gradient(circle, #3d9be9 0%, #1d7ecf 100%);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+#advantages-block * {
+    color: var(--color-white);
+}
+
+.choose-variant {
+    display: flex;
+    flex-direction: column;
+    padding: 8.5% 0 8%;
+    line-height: 1.4;
+    tab-size: 3;
+    box-sizing: inherit;
+    max-width: 780px;
+}
+
+.choose-variant__halve {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 50;
+    column-gap: 10rem;
+    flex-wrap: nowrap;
+}
+
+.choose-variant__halve:first-of-type {
+    border-bottom: 1px solid var(--color-pale-blue);
+    margin-bottom: 3.7rem;
+}
+
+.choose-variant__halve:first-of-type h3 {
+    font-size: calc(1.8rem + 0.5vw);
+}
+
+.web-variant {
+    width: 46%;
+}
+
+.text-component {
+    margin-bottom: 2em;
+    overflow: hidden;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.choose-variant .text-component {
+    line-height: 1.5;
+    margin-bottom: 3.7rem;
+    font-weight: normal;
+}
+
+.text-component p {
+    margin: 1rem 0;
+}
+
+.text-component p:first-child {
+    margin-top: 0;
+}
+
+.text-component p:last-child {
+    margin-bottom: 0;
+}
+
+.element-type-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 1.7rem;
+}
+
+.element-type-heading:after {
+    display: inline-block;
+    content: "";
+    width: 50px;
+    height: 50px;
+    box-sizing: inherit;
+    flex-shrink: 0;
+    transition: transform .3s ease-in-out;
+    background-size: contain !important;
+}
+
+.web-variant.-web-dev .element-type-heading::after {
+    background: url('../images/icons/advantages/service-white.svg') no-repeat;
+}
+
+.web-variant.-frontend .element-type-heading::after {
+    background: url('../images/icons/advantages/service_frontend.svg') no-repeat;
+}
+
+.web-variant.-seo .element-type-heading::after {
+    background: url('../images/icons/advantages/service_seo.svg') no-repeat;
+}
+
+.web-variant.-turnkey .element-type-heading::after {
+    background: url('../images/icons/advantages/service-white.svg') no-repeat;
+}
+
+.choose-variant.bg-down .-web-dev:hover .element-type-heading::after,
+.choose-variant.bg-up .-frontend:hover .element-type-heading::after,
+.choose-variant.bg-up .-seo:hover .element-type-heading::after,
+.choose-variant.bg-down .-turnkey:hover .element-type-heading::after {
+    transform: scale(1.2);
+}
+
+@media screen and (min-width: 1024px) {
+    .choose-variant:after {
+        width: 2000px;
+        height: 927px;
+        position: absolute;
+        content: "";
+        right: 0;
+        bottom: 0;
+        background: transparent url('../images/backgrounds/choose-variant-bg.png');
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        transform-origin: 45% 110%;
+        transition: background-position .6s;
+        transform: translate(50%) rotate(-45deg);
+        background-size: cover;
+        animation-duration: .4s;
+        animation-delay: .5s;
+        filter: drop-shadow(0px -10px 10px #00000080);
+        animation-iteration-count: 1;
+    }
+}
+
+.choose-variant.bg-up:after {
+    background-position-x: 90%;
+}
+
+.choose-variant.bg-down:after {
+    background-position-x: 10%;
+}
+
+
+
 /* стили для блока отзывов */
 .testimonial {
     background: #FFFFFF;
@@ -1042,6 +1189,15 @@ img#captchaImg {
     .entry-header-intro {
         font-size: 2.25rem;
     }
+
+    .section.-choose-variant:after {
+        width: 1450px;
+        height: 700px;
+    }
+
+    .choose-variant__halve {
+        flex-direction: column;
+    }
 }
 
 /* Большие устройства (десктопы, менее 1200px) */
@@ -1197,6 +1353,14 @@ img#captchaImg {
 
     .feedback-form__fields {
         display: block;
+    }
+
+    .choose-variant {
+        padding: 1.5rem;
+    }
+
+    .web-variant {
+        width:100%;
     }
 }
 

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<svg width="483" height="417" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:se="http://svg-edit.googlecode.com" data-name="веб-разработка">
+ <defs>
+  <style>.cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 14.17px;
+      }</style>
+ </defs>
+ <g class="layer">
+  <title>Layer 1</title>
+  <path class="cls-1" d="m8,141.87l0,138.87c0,15.58 12.63,28.22 28.22,28.22l410.77,0c15.58,0 28.22,-12.63 28.22,-28.22l0,-244.52c0,-15.58 -12.63,-28.22 -28.22,-28.22l-410.77,0c-15.58,0 -28.22,12.63 -28.22,28.22l0,58.73" fill="black" id="svg_1"/>
+  <line class="cls-1" id="svg_2" x1="240.83" x2="240.83" y1="319.28" y2="408.75"/>
+  <line class="cls-1" id="svg_3" x1="141.42" x2="336.92" y1="408.75" y2="408.75"/>
+  <rect class="cls-1" height="63.83" id="svg_4" width="121.12" x="239.17" y="169.15"/>
+  <polygon class="cls-1" id="svg_5" points="299.0400085449219,39.48999786376953 299.0400085449219,169.02000427246094 360.2799987792969,169.02000427246094 360.2799987792969,203.64999389648438 430.05999755859375,203.64999389648438 430.05999755859375,39.48999786376953 299.0400085449219,39.48999786376953 "/>
+  <rect class="cls-1" height="33.34" id="svg_6" width="90.71" x="55.61" y="49.24"/>
+  <rect class="cls-1" height="33.34" id="svg_7" width="90.71" x="55.61" y="116.24"/>
+  <rect class="cls-1" height="33.34" id="svg_8" width="90.71" x="55.61" y="183.23"/>
+  <line class="cls-1" id="svg_9" x1="151.74" x2="188.18" y1="65.91" y2="65.91"/>
+  <line class="cls-1" id="svg_10" x1="151.74" x2="188.18" y1="131.81" y2="131.81"/>
+  <line class="cls-1" id="svg_11" x1="151.74" x2="188.18" y1="199.9" y2="199.9"/>
+  <line class="cls-1" id="svg_12" x1="192.83" x2="192.83" y1="65.91" y2="199.9"/>
+  <line class="cls-1" id="svg_13" x1="328.5" x2="399.82" y1="70.31" y2="70.31"/>
+  <line class="cls-1" id="svg_14" x1="328.5" x2="399.82" y1="119.73" y2="119.73"/>
+  <line class="cls-1" id="svg_15" x1="328.5" x2="399.82" y1="94.47" y2="94.47"/>
+  <line class="cls-1" id="svg_16" x1="260.28" x2="278.88" y1="201.91" y2="201.91"/>
+  <line class="cls-1" id="svg_17" x1="302.92" x2="336.92" y1="201.91" y2="201.91"/>
+  <line class="cls-1" id="svg_18" x1="13.74" x2="472.77" y1="261.47" y2="261.47"/>
+  <line class="cls-1" id="svg_19" x1="220.74" x2="260.28" y1="283.37" y2="283.37"/>
+ </g>
+</svg>

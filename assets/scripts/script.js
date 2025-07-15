@@ -225,3 +225,29 @@ form.addEventListener("submit", function (e) {
     });
 
 });
+
+
+
+
+// БЛОК С ПРЕИМУЩЕСТВАМИ
+const chooseVariant = document.getElementById('choose-variant');
+const elementsRaiseBg = document.querySelectorAll('.raise-bg');
+const elementsLowerBg = document.querySelectorAll('.lower-bg');
+
+elementsRaiseBg.forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    chooseVariant.classList.add('bg-up');
+  });
+  el.addEventListener('mouseleave', () => {
+    chooseVariant.classList.remove('bg-up');
+  });
+});
+
+elementsLowerBg.forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    chooseVariant.classList.add('bg-down');
+  });
+  el.addEventListener('mouseleave', () => {
+    chooseVariant.classList.remove('bg-down');
+  });
+});
