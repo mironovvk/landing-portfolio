@@ -305,7 +305,7 @@ header.header__wrapper:not(.header_scrolled) .header-row {
 .header__wrapper.header_scrolled {
     background: var(--color-vivid-blue);
     color: var(--color-white);
-    top: 0;
+    top: 0 !important;
     opacity: 0.85;
 }
 
