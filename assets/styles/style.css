@@ -224,8 +224,6 @@ main>section {
     align-items: center;
     list-style-type: none;
     flex-wrap: wrap;
-    color: var();
-    /* добавить цвет */
     width: 100%;
     padding: 15px 0;
 }
@@ -441,6 +439,10 @@ ul.navbar-nav {
 .entry-header-intro {
     text-align: left;
     font-size: 2.5rem;
+}
+
+.entry-header-intro {
+    margin-top: 0;
 }
 
 .entry-header-text {
@@ -1412,6 +1414,10 @@ img#captchaImg {
 
     .section-title p {
         width: 100%;
+    }
+
+    .entry-header {
+        margin-top: 0;
     }
 
     .author__info {
