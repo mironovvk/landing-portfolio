@@ -1430,7 +1430,7 @@ img#captchaImg {
     }
 
     .entry-header-title-wrap {
-        padding: calc(10px * 2) calc(16px * 1.5) calc(10px * 2) 0;
+        padding: calc(10px * 2) calc(16px * 1.5);
     }
 
     .entry-header-intro,
