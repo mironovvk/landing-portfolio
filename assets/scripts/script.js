@@ -75,7 +75,6 @@ const swiper = new Swiper(".mySwiper", {
 document.querySelectorAll('.accordion-header').forEach(header => {
   header.addEventListener('click', () => {
     const content = header.nextElementSibling;
-    const icon = header.querySelector('.accordion__icon');
 
     header.classList.toggle('active');
     content.classList.toggle('active');
@@ -106,6 +105,35 @@ function showSuccessMessage(textContent, className) {
 
   });
 };
+
+
+// ФОРМА ОБРАТНОЙ СВЯЗИ
+document.addEventListener('DOMContentLoaded', () => {
+  const inputs = document.querySelectorAll('.feedback-form__control');
+
+  inputs.forEach(input => {
+    input.addEventListener('focus', () => {
+      input.classList.remove('invalid-field');
+    });
+
+    if (input.tagName.toLowerCase() === 'select') {
+      if (input.value.trim() !== '') input.classList.add('filled');
+      return;
+    }
+
+    input.addEventListener('blur', () => {
+      if (input.value.trim() !== '') {
+        input.classList.add('filled');
+      } else {
+        input.classList.remove('filled');
+      }
+    });
+
+    if (input.value.trim() !== '') {
+      input.classList.add('filled');
+    }
+  });
+});
 
 const form = document.getElementById("feedback-form");
 const messageBox = document.getElementById("form-message");
@@ -206,7 +234,6 @@ form.addEventListener("submit", function (e) {
       if (!res.ok) throw new Error(`Ошибка: ${res.status}`);
 
       // Просто считаем, что всё прошло успешно
-
       messageText = "Форма успешно отправлена!";
       showSuccessMessage(messageText, 'success');
 
