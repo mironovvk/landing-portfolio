@@ -106,8 +106,6 @@ function showSuccessMessage(textContent, className) {
   });
 };
 
-
-// ФОРМА ОБРАТНОЙ СВЯЗИ
 document.addEventListener('DOMContentLoaded', () => {
   const inputs = document.querySelectorAll('.feedback-form__control');
 
