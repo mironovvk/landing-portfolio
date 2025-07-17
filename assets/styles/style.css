@@ -307,6 +307,9 @@ header.header__wrapper:not(.header_scrolled) .header-row {
     color: var(--color-white);
     top: 0 !important;
     opacity: 0.85;
+    position: fixed;
+    left: 0;
+    right: 0;
 }
 
 .header__wrapper.header_scrolled .smooth-scroll {
