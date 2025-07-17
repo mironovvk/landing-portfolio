@@ -1305,6 +1305,11 @@ img#captchaImg {
         height: 26px;
     }
 
+    .choose-variant:after {
+        width: 1250px;
+        height: 540px;
+    }
+
     .footer__top {
         justify-content: start;
         row-gap: 20px;
@@ -1472,6 +1477,10 @@ img#captchaImg {
 
     .feedback-form {
         width: 90%;
+    }
+
+    .choose-variant:after {
+        display: none;
     }
 }
 
