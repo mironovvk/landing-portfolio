@@ -118,17 +118,6 @@ main>section {
     padding-bottom: 80px;
 }
 
-.row {
-    margin-left: 0;
-    margin-right: 0;
-}
-
-.row>* {
-    padding-left: 0;
-    padding-right: 0;
-}
-
-
 .logo {
     max-width: 240px;
     height: auto;
@@ -189,17 +178,22 @@ main>section {
 
 .section-title {
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin: 0 auto 2.75rem;
     padding-left: 0;
     padding-right: 0;
+    width: 100%;
+}
+
+@media (min-width: 991.5px) {
+    .section-title {
+        max-width: 75%;
+    }
 }
 
 .section-title h2 {
-    font-size: calc(1.6rem + 0.5vw);
-    font-weight: 500;
     font-weight: 700;
     font-size: 2.4rem;
-    color: rgb(14, 60, 95);
+    color: #0e3c5f;
     margin: 0px;
 }
 
@@ -216,7 +210,6 @@ main>section {
     font-weight: 400;
     font-size: 1.15rem;
     margin: 1.75rem auto 0;
-    width: 75%;
     color: var(--color-deep-indigo);
 }
 
@@ -542,11 +535,15 @@ ul.navbar-nav {
 }
 
 .choose-variant__halve:first-of-type h2 {
-    font-size: calc(1.8rem + 0.5vw);
+    font-weight: 700;
+    font-size: 2.4rem;
 }
 
 .choose-variant__halve:first-of-type p {
-    font-style: 1.15rem;
+    font-weight: 400;
+    font-size: 1.15rem;
+    margin: 1.75rem auto 0;
+    color: var(--color-deep-indigo);
 }
 
 .web-variant {
@@ -787,7 +784,7 @@ ul.navbar-nav {
 
 /* СТИЛИ ДЛЯ АККОРДЕОНА ВОПРОС ОТВЕТ */
 .accordion {
-    width: 70%;
+    width: 75%;
     margin: auto;
     padding-left: 0;
     padding-right: 0;
@@ -931,7 +928,7 @@ ul.navbar-nav {
 }
 
 .form-container {
-    width: 70%;
+    width: 75%;
     padding-left: 0;
     padding-right: 0;
     margin: auto;
@@ -1230,7 +1227,7 @@ img#captchaImg {
 
 .footer__nav_link:hover {
     color: var(--color-soft-white);
-    
+
 }
 
 .footer__column_logo {
@@ -1325,6 +1322,17 @@ img#captchaImg {
 
 /* Средние устройства (планшеты, менее 992px) */
 @media (max-width: 991.98px) {
+
+    .choose-variant__halve:first-of-type h2,
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+
+    .choose-variant__halve:first-of-type p,
+    .section-title p {
+        font-size: 1rem;
+    }
+
     .testimonial__stars img {
         width: 32%;
     }
@@ -1332,6 +1340,14 @@ img#captchaImg {
     .choose-variant:after {
         width: 1250px;
         height: 540px;
+    }
+
+    .accordion {
+        width: 100%;
+    }
+
+    .form-container {
+        width: 100%;
     }
 
     .icon {
@@ -1437,10 +1453,6 @@ img#captchaImg {
         border-radius: 0;
     }
 
-    .section-title p {
-        width: 100%;
-    }
-
     .entry-header {
         margin-top: 0;
     }
@@ -1498,14 +1510,6 @@ img#captchaImg {
     }
 
     .web-variant {
-        width: 100%;
-    }
-
-    .accordion {
-        width: 100%;
-    }
-
-    .form-container {
         width: 100%;
     }
 
