@@ -440,12 +440,14 @@ ul.navbar-nav {
 
 .breadcrumb-item.active,
 .breadcrumb-item+.breadcrumb-item::before {
-    color: var(--color-vivid-blue);
+    /* color: var(--color-vivid-blue); */
+    color: var(--color-deep-indigo);
 }
 
 
 @media (min-width: 62rem) {
     .l-section-kbs {
+        /* margin: 71px 0 40px 0; */
         margin: 20px 0 40px 0;
     }
 
@@ -618,12 +620,6 @@ ul.navbar-nav {
 
 .portfolio-card__meta-item:last-child .portfolio-card__meta-value {
     padding-bottom: .6rem;
-}
-
-.portfolio-card .testimonial__stars img {
-    width: 40%;
-    float: right;
-    /* margin-left: 40%; */
 }
 
 /* Стили блока с преимуществами */

@@ -1,3 +1,8 @@
+window.addEventListener('load', () => {
+  window.scrollTo(0, 0);
+});
+
+
 const topbar = document.getElementById('topbar');
 const header = document.getElementById('header');
 
@@ -189,7 +194,7 @@ form.addEventListener("submit", function (e) {
       formData.append(elem.name, fieldValue);
     }
 
-    console.log(elem.name, fieldValue, fieldMask, fieldMask?.test(fieldValue));
+    // console.log(elem.name, fieldValue, fieldMask, fieldMask?.test(fieldValue));
   });
 
   if (checkTest.length) {
@@ -201,10 +206,8 @@ form.addEventListener("submit", function (e) {
   // Если всё прошло, показываем данные в консоли (или отправляем через fetch/ajax)
   // console.log("Данные формы:", Object.fromEntries(formData.entries()));
 
-  // Преобразуем FormData в объект
   const jsonObject = Object.fromEntries(formData.entries());
 
-  // Отправляем как JSON
   fetch(form.action || "/", {
     method: form.method || "POST",
     headers: {
@@ -213,26 +216,35 @@ form.addEventListener("submit", function (e) {
     body: JSON.stringify(jsonObject),
   })
     .then((res) => {
-      if (!res.ok) throw new Error(`Ошибка: ${res.status}`);
+      if (!res.ok) throw new Error(`Ошибка HTTP: ${res.status}`);
+      return res.json();
+    })
+    .then((data) => {
+      console.log("Ответ сервера (распарсенный JSON):", data);
+      if (!data.success) {
+        throw new Error(data.message || "Ошибка на сервере");
+      }
 
-      // Просто считаем, что всё прошло успешно
-      messageText = "Форма успешно отправлена!";
-      showSuccessMessage(messageText, 'success');
-
-      console.log("Отправляем на сервер:", jsonObject);
-
-      // form.submit();
-      form.reset();
+      // Если сервер вернул успех
+      showSuccessMessage(data.message || "Форма успешно отправлена!", 'success');
       form.querySelectorAll(".invalid-field").forEach((el) =>
         el.classList.remove("invalid-field")
       );
+
+      // Отправляем форму классическим способом через 2 секунды (чтобы сообщение успело показаться)
+      form.reset();
+      form.querySelectorAll(".feedback-form__control").forEach((el) => {
+        if (el.tagName.toLowerCase() !== 'select') {
+          el.classList.remove("filled");
+        }
+      });
+      // Или переход на другую страницу:
+      // window.location.href = "/thank-you.html";
     })
     .catch((err) => {
-      messageText = "Произошла ошибка при отправке. Попробуйте позже.";
-      showSuccessMessage(messageText, 'error');
-      console.error(err);
+      showSuccessMessage(err.message || "Произошла ошибка при отправке. Попробуйте позже.", 'error');
+      // console.error(err);
     });
-
 });
 
 
