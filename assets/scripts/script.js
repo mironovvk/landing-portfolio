@@ -21,11 +21,9 @@ const lightLogo = document.querySelector('.logo--light');
 // Отслеживаем прокрутку страницы
 window.addEventListener('scroll', () => {
   if (window.scrollY > topbarHeight) {
-    header.classList.remove('header_transparent');
     header.classList.add('header_scrolled');
     header.style.top = 0;
   } else {
-    header.classList.add('header_transparent');
     header.classList.remove('header_scrolled');
     setHeaderOffset();
   }
@@ -39,21 +37,7 @@ burgerBtn.addEventListener('click', () => {
   burgerBtn.classList.toggle('active');
   navCollapse.classList.toggle('open');
   if (navCollapse.classList.contains('open')) {
-    header.classList.remove('header_transparent');
-  } else if (window.scrollY <= topbarHeight) {
-    header.classList.add('header_transparent');
   }
-});
-
-// Для всех ссылок меню навигации добавляем обработчик клика
-document.querySelectorAll('.navbar-nav a').forEach(link => {
-  link.addEventListener('click', () => {
-    burgerBtn.classList.remove('active');
-    navCollapse.classList.remove('open');
-    if (window.scrollY <= topbarHeight) {
-      header.classList.add('header_transparent');
-    }
-  });
 });
 
 const swiper = new Swiper(".mySwiper", {
