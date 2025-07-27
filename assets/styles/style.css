@@ -1729,8 +1729,10 @@ img#captchaImg {
         grid-template-columns: 1fr;
     }
 
-    .portfolio-card__stack .portfolio-card__meta-label{
-        margin-bottom: 6px;
+    .tags {
+        /* bottom: 0;
+        margin-bottom: 2rem; */
+        /* flex-direction: column; */
     }
 
     .tags__item {
