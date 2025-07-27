@@ -1725,18 +1725,12 @@ img#captchaImg {
 
 /* Очень маленькие устройства (портретные телефоны, менее 576px) */
 @media (max-width: 575.98px) {
-    .portfolio-card__meta-item:last-child {
-        /* justify-content: center; */
-    }
-
-    .portfolio-card__meta-item {
+    .portfolio-card__stack {
         grid-template-columns: 1fr;
     }
 
-    .tags {
-        /* bottom: 0;
-        margin-bottom: 2rem; */
-        /* flex-direction: column; */
+    .portfolio-card__stack .portfolio-card__meta-label{
+        margin-bottom: 6px;
     }
 
     .tags__item {
