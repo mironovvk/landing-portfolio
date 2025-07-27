@@ -1,7 +1,6 @@
-window.addEventListener('load', () => {
-  window.scrollTo(0, 0);
-});
-
+// window.addEventListener('load', () => {
+//   window.scrollTo(0, 0);
+// });
 
 const topbar = document.getElementById('topbar');
 const header = document.getElementById('header');
@@ -16,13 +15,6 @@ function setHeaderOffset() {
   header.style.top = `${topbarHeight}px`;
 }
 
-// Вызываем setHeaderOffset при загрузке страницы и при изменении размера окна
-window.addEventListener('load', setHeaderOffset);
-window.addEventListener('resize', setHeaderOffset);
-
-const darkLogo = document.querySelector('.logo--dark');
-const lightLogo = document.querySelector('.logo--light');
-
 // Отслеживаем прокрутку страницы
 window.addEventListener('scroll', () => {
   if (window.scrollY > topbarHeight) {
@@ -33,6 +25,13 @@ window.addEventListener('scroll', () => {
     setHeaderOffset();
   }
 });
+
+// Вызываем setHeaderOffset при загрузке страницы и при изменении размера окна
+window.addEventListener('load', setHeaderOffset);
+window.addEventListener('resize', setHeaderOffset);
+
+const darkLogo = document.querySelector('.logo--dark');
+const lightLogo = document.querySelector('.logo--light');
 
 const burgerBtn = document.getElementById('burger-btn');
 const navCollapse = document.getElementById('collapseExample');
@@ -102,23 +101,6 @@ document.addEventListener('DOMContentLoaded', () => {
     input.addEventListener('focus', () => {
       input.classList.remove('invalid-field');
     });
-
-    if (input.tagName.toLowerCase() === 'select') {
-      if (input.value.trim() !== '') input.classList.add('filled');
-      return;
-    }
-
-    input.addEventListener('blur', () => {
-      if (input.value.trim() !== '') {
-        input.classList.add('filled');
-      } else {
-        input.classList.remove('filled');
-      }
-    });
-
-    if (input.value.trim() !== '') {
-      input.classList.add('filled');
-    }
   });
 });
 
@@ -149,7 +131,6 @@ form.addEventListener("submit", function (e) {
     if (elem.name && elem.dataset.type) {
       switch (elem.dataset.type) {
         case "phone":
-          // Убираем все символы кроме цифр и +
           fieldValue = fieldValue.replace(/[.(),;:!?%#$'\"_=\/\-\s]*/g, "");
           fieldMask = /^[0-9\+]{8,12}$/i;
           break;
@@ -158,17 +139,15 @@ form.addEventListener("submit", function (e) {
           fieldMask = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
           break;
 
-        case "captcha":
-          fieldMask = /^[A-Za-z0-9]{5}$/i;
+        case "full_name":
+          fieldMask = /^([А-ЯЁа-яёA-Za-z-]+)(\s[А-ЯЁа-яёA-Za-z-]+)*$/;
           break;
-
-        case "fio":
-          fieldMask = /^[А-ЯЁа-яё]+\s[А-ЯЁа-яё]+\s[А-ЯЁа-яё]+$/;
-          break;
-
         case "select":
-          // Значение должно быть непустым
           fieldMask = /^.+$/;
+          break;
+
+        case "message":
+          fieldMask = /^[^<>]{10,1000}$/s;
           break;
 
         default:
@@ -176,7 +155,7 @@ form.addEventListener("submit", function (e) {
           break;
       }
 
-      // Проверяем поле, если оно required
+      // проверяем поле, если оно required
       if (elem.hasAttribute("required")) {
         if (!fieldValue || !fieldMask || !fieldMask.test(fieldValue)) {
           checkTest.push(elem.name);
@@ -203,49 +182,62 @@ form.addEventListener("submit", function (e) {
     return false;
   }
 
-  // Если всё прошло, показываем данные в консоли (или отправляем через fetch/ajax)
+  // если всё прошло, показываем данные в консоли и отправляем через fetch
   // console.log("Данные формы:", Object.fromEntries(formData.entries()));
 
+  const recaptchaResponse = document.getElementById("g-recaptcha-response").value;
   const jsonObject = Object.fromEntries(formData.entries());
+  jsonObject["g-recaptcha-response"] = recaptchaResponse;
 
-  fetch(form.action || "/", {
-    method: form.method || "POST",
+    fetch('https://www.programweb.studio/contacts.php', {
+    method: form.method,
     headers: {
-      "Content-Type": "application/json",
+      "Content-Type": "application/json; charset=utf-8",
     },
     body: JSON.stringify(jsonObject),
   })
-    .then((res) => {
-      if (!res.ok) throw new Error(`Ошибка HTTP: ${res.status}`);
-      return res.json();
+    .then(response => {
+      if (response.status !== 200) {
+        return Promise.reject();
+      }
+      return response.json();
     })
     .then((data) => {
       console.log("Ответ сервера (распарсенный JSON):", data);
-      if (!data.success) {
-        throw new Error(data.message || "Ошибка на сервере");
+      console.log(data);
+      //alert(data.Status);
+      if (data.Status == 'success') {
+        form.reset();
+        form.querySelector("#success_formCallback").style.display = 'flex';
+        form.querySelector("#success_formCallback").innerHTML = 'Ваше обращение успешно зарегистрировано.<br>В ближайшее время мы свяжемся с Вами.';
+      } else {
+        form.querySelector("#errors_formCallback").style.display = 'flex';
+        form.querySelector("#errors_formCallback").innerHTML = 'Не удалось отправить данные формы. ' + data.Msg;
+
+          grecaptcha.execute("6LfmgA8pAAAAAH-Qn2UfaUQkvDsGflyV4X0DcU7E", { action: "add_form" })
+          .then(function (token) {
+            [].forEach.call(document.querySelectorAll('input.token'), function (el) {
+              el.value = token;
+            });
+          });
       }
 
-      // Если сервер вернул успех
+
       showSuccessMessage(data.message || "Форма успешно отправлена!", 'success');
       form.querySelectorAll(".invalid-field").forEach((el) =>
         el.classList.remove("invalid-field")
       );
-
-      // Отправляем форму классическим способом через 2 секунды (чтобы сообщение успело показаться)
-      form.reset();
-      form.querySelectorAll(".feedback-form__control").forEach((el) => {
-        if (el.tagName.toLowerCase() !== 'select') {
-          el.classList.remove("filled");
-        }
-      });
-      // Или переход на другую страницу:
-      // window.location.href = "/thank-you.html";
+      console.log("Отправляем на сервер:", jsonObject);
     })
     .catch((err) => {
+      // console.error('Ошибка в fetch:', err);
       showSuccessMessage(err.message || "Произошла ошибка при отправке. Попробуйте позже.", 'error');
-      // console.error(err);
+      form.querySelector("#errors_formCallback").style.display = 'flex';
+      form.querySelector("#errors_formCallback").innerHTML = 'Произошла ошибка при отправке. Попробуйте позже.' + err.message;
     });
+
 });
+
 
 
 
@@ -271,4 +263,9 @@ elementsLowerBg.forEach(el => {
   el.addEventListener('mouseleave', () => {
     chooseVariant.classList.remove('bg-down');
   });
+});
+
+const lightbox = GLightbox({
+  touchNavigation: false,
+  keyboardNavigation: false,
 });

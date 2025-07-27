@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="./assets/styles/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/styles/normalize.css">
     <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="stylesheet" href="./assets/styles/glightbox.min.css">
     <script src="./assets/scripts/imask.js"></script>
     <title>Портфолио | Интернет-агентство ПрограмВеб</title>
 </head>
@@ -70,24 +71,18 @@
         </div>
     </header>
     <main>
-        <section class="breadcrumb-section">
-            <div class="container">
-                <div class="row g-0">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Главная</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Портфолио</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
-        </section>
         <section class="theme-blue bg-blue c-white l-section-kbs -left">
             <div class="container">
-                <div class="l-section-kbs__outer ">
+                <div class="l-section-kbs__outer">
                     <div class="l-section-kbs__inner">
                         <div class="row">
                             <div class="col-12">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Портфолио</li>
+                                    </ol>
+                                </nav>
                                 <h1 class="h1">
                                     Портфолио
                                 </h1>
@@ -107,45 +102,45 @@
                                     <div class="portfolio-card__body-inner">
                                         <h3 class="portfolio-card__title">Корпоративный сайт ProgramLab</h3>
                                         <div class="portfolio-card__description">
-                                            <p>Проект представляет собой разработку адаптивного веб-приложения с
-                                                индивидуальным дизайном. Основной задачей было создать удобный
-                                                пользовательский интерфейс и обеспечить интеграцию с внешними сервисами.
-                                            </p>
+                                            <p><span class="portfolio-card__meta-label">Направление: </span>Сфера услуг, информационные технологии</p>
+                                            <p><span class="portfolio-card__meta-label">Задача: </span>Создать современный корпоративный сайт для презентации и продвижения SaaS-продукта на рынке СНГ</p>
                                         </div>
                                         <div class="portfolio-card__meta">
                                             <div class="portfolio-card__meta-item">
-                                                <span class="portfolio-card__meta-label">Клиент:</span>
-                                                <span class="portfolio-card__meta-value">ООО «ПрограмЛаб»</span>
-                                            </div>
-                                            <div class="portfolio-card__meta-item">
-                                                <span class="portfolio-card__meta-label">Реализация:</span>
+                                                <span class="portfolio-card__meta-label">Год:</span>
                                                 <span class="portfolio-card__meta-value">2020</span>
                                             </div>
                                             <div class="portfolio-card__meta-item">
                                                 <span class="portfolio-card__meta-label">Сайт:</span>
                                                 <span class="portfolio-card__meta-value">
-                                                    <a href="#" class="portfolio-card__meta-link">Корпоративный сайт
-                                                        ProgramLab</a>
+                                                    <a href="https://plllc.ru/" target="_blank" class="portfolio-card__meta-link">www.pl-llc.ru</a>
                                                 </span>
                                             </div>
                                             <div class="portfolio-card__meta-item">
-                                                <span class="portfolio-card__meta-label">От клиента:</span>
-                                                <span class="portfolio-card__meta-value">
-                                                    Подход, ориентированный на клиента, имеет огромное значение,
-                                                    потому что
-                                                    он показывает, что ПрограмВеб смотрит на задачу нашими глазами.
-                                                    Это то,
-                                                    что отличает отношения с заказчиком от настоящего партнерства. С
-                                                    ПрограмВеб у нас сложились прочные плодотворные партнерские
-                                                    отношения,
-                                                    которое мы действительно ценим.
-                                                </span>
+                                                <span class="portfolio-card__meta-label">Технологии:</span>
+                                                <span class="portfolio-card__meta-value">HTML5, JavaScript, PHP, 1С Bitrix</span>
+                                            </div>
+                                            <div class="portfolio-card__meta-item">
+                                                <a href="#feedback-form" class="form-btn btn-default">Заказать проект</a>
+                                                <a href="./assets/images/portfolio-reviews/reviews.jpg" class="glightbox form-btn btn-default btn-white-b">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" focusable="false">
+                                                        <path d="M18.124 2.5L1.87402 2.5L1.24902 3.125L1.24902 15.625L1.87402 16.25L18.124 16.25L18.749 15.625L18.749 3.125L18.124 2.5ZM17.499 3.75L17.499 15L2.49902 15L2.49902 3.75L17.499 3.75ZM14.999 6.25L4.99902 6.25L4.99902 7.5L14.999 7.5L14.999 6.25ZM4.99902 8.75L12.499 8.75L12.499 10L4.99902 10L4.99902 8.75ZM9.99902 11.25L4.99902 11.25L4.99902 12.5L9.99902 12.5L9.99902 11.25Z"
+                                                            fill="currentColor" fill-opacity="1" fill-rule="evenodd" clip-rule="evenodd" />
+                                                    </svg>
+                                                    Посмотреть отзыв
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="portfolio-card__image-wrapper">
                                     <div class="portfolio-card__image">
+                                        <ul class="tags">
+                                            <li class="tags__item">#Реклама</li>
+                                            <li class="tags__item">#Seo</li>
+                                            <li class="tags__item">#Дизайн</li>
+                                            <li class="tags__item">#Программирование</li>
+                                        </ul>
                                         <img src="./assets/images/cards/portfolio/project1.png"
                                             alt="Project preview">
                                     </div>
@@ -158,45 +153,45 @@
                                     <div class="portfolio-card__body-inner">
                                         <h3 class="portfolio-card__title">Юридический портал<br>Мой адвокат</h3>
                                         <div class="portfolio-card__description">
-                                            <p>Проект представляет собой разработку адаптивного веб-приложения с
-                                                индивидуальным дизайном. Основной задачей было создать удобный
-                                                пользовательский интерфейс и обеспечить интеграцию с внешними сервисами.
-                                            </p>
+                                            <p><span class="portfolio-card__meta-label">Направление: </span>Юридические услуги, информационные технологии</p>
+                                            <p><span class="portfolio-card__meta-label">Задача: </span>Разработать удобный и информативный портал для поиска и консультации с адвокатами, обеспечить функционал онлайн-записи и обмена документами</p>
                                         </div>
                                         <div class="portfolio-card__meta">
                                             <div class="portfolio-card__meta-item">
-                                                <span class="portfolio-card__meta-label">Клиент:</span>
-                                                <span class="portfolio-card__meta-value">Škoda Auto</span>
-                                            </div>
-                                            <div class="portfolio-card__meta-item">
-                                                <span class="portfolio-card__meta-label">Реализация:</span>
+                                                <span class="portfolio-card__meta-label">Год:</span>
                                                 <span class="portfolio-card__meta-value">2020</span>
                                             </div>
                                             <div class="portfolio-card__meta-item">
                                                 <span class="portfolio-card__meta-label">Сайт:</span>
                                                 <span class="portfolio-card__meta-value">
-                                                    <a href="#" class="portfolio-card__meta-link">Юридический портал
-                                                        Мой адвокат</a>
+                                                    <a href="https://my-advo.cat/" target="_blank" class="portfolio-card__meta-link">www.my-advo.cat</a>
                                                 </span>
                                             </div>
                                             <div class="portfolio-card__meta-item">
-                                                <span class="portfolio-card__meta-label">От клиента:</span>
-                                                <span class="portfolio-card__meta-value">
-                                                    Подход, ориентированный на клиента, имеет огромное значение,
-                                                    потому что
-                                                    он показывает, что ПрограмВеб смотрит на задачу нашими глазами.
-                                                    Это то,
-                                                    что отличает отношения с заказчиком от настоящего партнерства. С
-                                                    ПрограмВеб у нас сложились прочные плодотворные партнерские
-                                                    отношения,
-                                                    которое мы действительно ценим.
-                                                </span>
+                                                <span class="portfolio-card__meta-label">Технологии:</span>
+                                                <span class="portfolio-card__meta-value">HTML5, JavaScript, MySQL, PHP, 1С Bitrix</span>
+                                            </div>
+                                            <div class="portfolio-card__meta-item">
+                                                <a href="#feedback-form" class="form-btn btn-default">Заказать проект</a>
+                                                <a href="./assets/images/portfolio-reviews/reviews.jpg" class="glightbox form-btn btn-default btn-white-b">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" focusable="false">
+                                                        <path d="M18.124 2.5L1.87402 2.5L1.24902 3.125L1.24902 15.625L1.87402 16.25L18.124 16.25L18.749 15.625L18.749 3.125L18.124 2.5ZM17.499 3.75L17.499 15L2.49902 15L2.49902 3.75L17.499 3.75ZM14.999 6.25L4.99902 6.25L4.99902 7.5L14.999 7.5L14.999 6.25ZM4.99902 8.75L12.499 8.75L12.499 10L4.99902 10L4.99902 8.75ZM9.99902 11.25L4.99902 11.25L4.99902 12.5L9.99902 12.5L9.99902 11.25Z"
+                                                            fill="currentColor" fill-opacity="1" fill-rule="evenodd" clip-rule="evenodd" />
+                                                    </svg>
+                                                    Посмотреть отзыв
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="portfolio-card__image-wrapper">
                                     <div class="portfolio-card__image">
+                                        <ul class="tags">
+                                            <li class="tags__item">#Разработка</li>
+                                            <li class="tags__item">#Дизайн</li>
+                                            <li class="tags__item">#ВебПортал</li>
+                                            <li class="tags__item">#Поддержка</li>
+                                        </ul>
                                         <img src="./assets/images/cards/portfolio/project2.png"
                                             alt="Project preview">
                                     </div>
@@ -207,41 +202,148 @@
                             <div class="portfolio-card__content">
                                 <div class="portfolio-card__body">
                                     <div class="portfolio-card__body-inner">
-                                        <h3 class="portfolio-card__title">Панель управления проектами PLAdmin</h3>
+                                        <h3 class="portfolio-card__title">Мобильное приложение<br>Мой Адвокат</h3>
                                         <div class="portfolio-card__description">
-                                            <p>Проект представляет собой разработку адаптивного веб-приложения с
-                                                индивидуальным дизайном. Основной задачей было создать удобный
-                                                пользовательский интерфейс и обеспечить интеграцию с внешними сервисами.
-                                            </p>
+                                            <p><span class="portfolio-card__meta-label">Направление: </span>Юридические услуги, Мобильные технологии</p>
+                                            <p><span class="portfolio-card__meta-label">Задача: </span>Разработать мобильное приложение для взаимодействия клиентов с адвокатами, включая чат, онлайн-запись и управление документами</p>
                                         </div>
                                         <div class="portfolio-card__meta">
                                             <div class="portfolio-card__meta-item">
-                                                <span class="portfolio-card__meta-label">Клиент:</span>
-                                                <span class="portfolio-card__meta-value">Škoda Auto</span>
-                                            </div>
-                                            <div class="portfolio-card__meta-item">
-                                                <span class="portfolio-card__meta-label">Реализация:</span>
-                                                <span class="portfolio-card__meta-value">2020</span>
+                                                <span class="portfolio-card__meta-label">Год:</span>
+                                                <span class="portfolio-card__meta-value">2024</span>
                                             </div>
                                             <div class="portfolio-card__meta-item">
                                                 <span class="portfolio-card__meta-label">Сайт:</span>
                                                 <span class="portfolio-card__meta-value">
-                                                    <a href="#" class="portfolio-card__meta-link">Панель управления
-                                                        проектами PLAdmin</a>
+                                                    <a href="https://m.my-advo.cat/" target="_blank" class="portfolio-card__meta-link">www.m.my-advo.cat</a>
                                                 </span>
                                             </div>
                                             <div class="portfolio-card__meta-item">
-                                                <span class="portfolio-card__meta-label">Рубрики:</span>
-                                                <span class="portfolio-card__meta-value">HbbTV
-                                                </span>
+                                                <span class="portfolio-card__meta-label">Технологии:</span>
+                                                <span class="portfolio-card__meta-value">Flutter, Dart, Firebase, REST API</span>
+                                            </div>
+                                            <div class="portfolio-card__meta-item">
+                                                <a href="#feedback-form" class="form-btn btn-default">Заказать проект</a>
+                                                <a href="./assets/images/portfolio-reviews/reviews.jpg" class="glightbox form-btn btn-default btn-white-b">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" focusable="false">
+                                                        <path d="M18.124 2.5L1.87402 2.5L1.24902 3.125L1.24902 15.625L1.87402 16.25L18.124 16.25L18.749 15.625L18.749 3.125L18.124 2.5ZM17.499 3.75L17.499 15L2.49902 15L2.49902 3.75L17.499 3.75ZM14.999 6.25L4.99902 6.25L4.99902 7.5L14.999 7.5L14.999 6.25ZM4.99902 8.75L12.499 8.75L12.499 10L4.99902 10L4.99902 8.75ZM9.99902 11.25L4.99902 11.25L4.99902 12.5L9.99902 12.5L9.99902 11.25Z"
+                                                            fill="currentColor" fill-opacity="1" fill-rule="evenodd" clip-rule="evenodd" />
+                                                    </svg>
+                                                    Посмотреть отзыв
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="portfolio-card__image-wrapper">
                                     <div class="portfolio-card__image">
-                                        <img src="./assets/images/cards/portfolio/project3.png"
-                                            alt="Project preview">
+                                        <ul class="tags">
+                                            <li class="tags__item">#Разработка</li>
+                                            <li class="tags__item">#Дизайн</li>
+                                            <li class="tags__item">#МобильноеПриложение</li>
+                                            <li class="tags__item">#Реклама</li>
+                                        </ul>
+                                        <img src="./assets/images/cards/portfolio/project3.png" alt="Project preview">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-card">
+                            <div class="portfolio-card__content">
+                                <div class="portfolio-card__body">
+                                    <div class="portfolio-card__body-inner">
+                                        <h3 class="portfolio-card__title">Лендинг Пой с Фраером</h3>
+                                        <div class="portfolio-card__description">
+                                            <p><span class="portfolio-card__meta-label">Направление: </span>Развлечения, Ресторанный бизнес</p>
+                                            <p><span class="portfolio-card__meta-label">Задача: </span>Создать яркий лендинг для продвижения караоке-бара, интегрировать онлайн-бронирование столов и меню</p>
+                                        </div>
+                                        <div class="portfolio-card__meta">
+                                            <div class="portfolio-card__meta-item">
+                                                <span class="portfolio-card__meta-label">Год:</span>
+                                                <span class="portfolio-card__meta-value">2023</span>
+                                            </div>
+                                            <div class="portfolio-card__meta-item">
+                                                <span class="portfolio-card__meta-label">Сайт:</span>
+                                                <span class="portfolio-card__meta-value">
+                                                    <a href="https://karaoke.fraer-chel.ru" target="_blank" class="portfolio-card__meta-link">www.karaoke.fraer-chel.ru</a>
+                                                </span>
+                                            </div>
+                                            <div class="portfolio-card__meta-item">
+                                                <span class="portfolio-card__meta-label">Технологии:</span>
+                                                <span class="portfolio-card__meta-value">HTML5, CSS3, JavaScript, PHP</span>
+                                            </div>
+                                            <div class="portfolio-card__meta-item">
+                                                <a href="#feedback-form" class="form-btn btn-default">Заказать проект</a>
+                                                <a href="./assets/images/portfolio-reviews/reviews.jpg" class="glightbox form-btn btn-default btn-white-b">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" focusable="false">
+                                                        <path d="M18.124 2.5L1.87402 2.5L1.24902 3.125L1.24902 15.625L1.87402 16.25L18.124 16.25L18.749 15.625L18.749 3.125L18.124 2.5ZM17.499 3.75L17.499 15L2.49902 15L2.49902 3.75L17.499 3.75ZM14.999 6.25L4.99902 6.25L4.99902 7.5L14.999 7.5L14.999 6.25ZM4.99902 8.75L12.499 8.75L12.499 10L4.99902 10L4.99902 8.75ZM9.99902 11.25L4.99902 11.25L4.99902 12.5L9.99902 12.5L9.99902 11.25Z"
+                                                            fill="currentColor" fill-opacity="1" fill-rule="evenodd" clip-rule="evenodd" />
+                                                    </svg>
+                                                    Посмотреть отзыв
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio-card__image-wrapper">
+                                    <div class="portfolio-card__image">
+                                        <ul class="tags">
+                                            <li class="tags__item">#Лендинг</li>
+                                            <li class="tags__item">#Верстка</li>
+                                            <li class="tags__item">#Дизайн</li>
+                                            <li class="tags__item">#Программирование</li>
+                                        </ul>
+                                        <img src="./assets/images/cards/portfolio/project4.png" alt="Project preview">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-card">
+                            <div class="portfolio-card__content">
+                                <div class="portfolio-card__body">
+                                    <div class="portfolio-card__body-inner">
+                                        <h3 class="portfolio-card__title">Готовое решение Среда дистанционного обучения</h3>
+                                        <div class="portfolio-card__description">
+                                            <p><span class="portfolio-card__meta-label">Направление: </span>Образование, Информационные технологии</p>
+                                            <p><span class="portfolio-card__meta-label">Задача: </span>Разработать онлайн-платформу для дистанционного обучения с поддержкой видеоуроков, тестирования и личного кабинета</p>
+                                        </div>
+                                        <div class="portfolio-card__meta">
+                                            <div class="portfolio-card__meta-item">
+                                                <span class="portfolio-card__meta-label">Год:</span>
+                                                <span class="portfolio-card__meta-value">2022</span>
+                                            </div>
+                                            <div class="portfolio-card__meta-item">
+                                                <span class="portfolio-card__meta-label">Сайт:</span>
+                                                <span class="portfolio-card__meta-value">
+                                                    <a href="https://do.plllc.ru" target="_blank" class="portfolio-card__meta-link">www.do.plllc.ru</a>
+                                                </span>
+                                            </div>
+                                            <div class="portfolio-card__meta-item">
+                                                <span class="portfolio-card__meta-label">Технологии:</span>
+                                                <span class="portfolio-card__meta-value">HTML5, CSS3, JavaScript, PHP, 1C-Bitrix</span>
+                                            </div>
+                                            <div class="portfolio-card__meta-item">
+                                                <a href="#feedback-form" class="form-btn btn-default">Заказать проект</a>
+                                                <a href="./assets/images/portfolio-reviews/reviews.jpg" class="glightbox form-btn btn-default btn-white-b">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" focusable="false">
+                                                        <path d="M18.124 2.5L1.87402 2.5L1.24902 3.125L1.24902 15.625L1.87402 16.25L18.124 16.25L18.749 15.625L18.749 3.125L18.124 2.5ZM17.499 3.75L17.499 15L2.49902 15L2.49902 3.75L17.499 3.75ZM14.999 6.25L4.99902 6.25L4.99902 7.5L14.999 7.5L14.999 6.25ZM4.99902 8.75L12.499 8.75L12.499 10L4.99902 10L4.99902 8.75ZM9.99902 11.25L4.99902 11.25L4.99902 12.5L9.99902 12.5L9.99902 11.25Z"
+                                                            fill="currentColor" fill-opacity="1" fill-rule="evenodd" clip-rule="evenodd" />
+                                                    </svg>
+                                                    Посмотреть отзыв
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio-card__image-wrapper">
+                                    <div class="portfolio-card__image">
+                                        <ul class="tags">
+                                            <li class="tags__item">#Готовое решение</li>
+                                            <li class="tags__item">#Дизайн</li>
+                                            <li class="tags__item">#Верстка</li>
+                                            <li class="tags__item">#Интеграция</li>
+                                        </ul>
+                                        <img src="./assets/images/cards/portfolio/project5.png" alt="Project preview">
                                     </div>
                                 </div>
                             </div>
@@ -259,11 +361,7 @@
                                 <div>
                                     <h2 class="element-type-heading">Наши приемущества</h2>
                                     <div class="text-component">
-                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, delectus!
-                                        </p>
-                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit at omnis
-                                            optio vitae repellat obcaecati. Delectus corrupti molestiae amet, porro,
-                                            doloribus distinctio, rem rerum ea magni ut quas ullam sapiente.</p>
+                                        <p>Мы создаём проекты, которые работают на результат. Качественный дизайн, современный код и внимание к деталям помогают нашим клиентам выделяться в цифровом пространстве. Каждое решение — индивидуально, каждое портфолио — отражение профессионализма и креативности.</p>
                                     </div>
                                 </div>
                             </div>
@@ -272,12 +370,9 @@
                             <div id="web-variant-web-dev" class="web-variant lower-bg -web-dev">
                                 <div class="dev-element-block">
                                     <div>
-                                        <h3 class="element-type-heading">Веб-разработка</h3>
+                                        <h3 class="element-type-heading">Стоимость услуг</h3>
                                         <div class="text-component">
-                                            <p>Создаем сайты различных типов: от лендингов, сайтов-визиток,
-                                                корпоративных сайтов, систем бронирования, торговых площадок до
-                                                интернет-магазинов.
-                                            </p>
+                                            <p>Цены существенно ниже рыночных благодаря объему заказов и высокой производительности труда.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -285,10 +380,9 @@
                             <div id="web-variant-frontend" class="web-variant raise-bg -frontend">
                                 <div class="dev-element-block">
                                     <div>
-                                        <h3 class="element-type-heading">Верстка и frontend-разработка</h3>
+                                        <h3 class="element-type-heading">Выполнение работы в срок</h3>
                                         <div class="text-component">
-                                            <p>«Оживляем» макеты с помощью цифровых технологий: HTML5, Bootstrap,
-                                                UI-kit, React, jQuery.</p>
+                                            <p>Согласование на каждом этапе с целю дать клиенту уверенность, что работа ведется и будет выполнена в срок.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -298,10 +392,9 @@
                             <div id="web-variant-seo" class="web-variant raise-bg -seo">
                                 <div class="dev-element-block">
                                     <div>
-                                        <h3 class="element-type-heading">Поисковая оптимизация</h3>
+                                        <h3 class="element-type-heading">Качество работы. Комфорт.</h3>
                                         <div class="text-component">
-                                            <p>Доработка сайтов под сео, внедрение микроразметки, оптимизация скорости
-                                                загрузки страниц.</p>
+                                            <p>Профессиональная команда разработчиков и дизайнеров, удобный офис, качественная обратная связь.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -309,10 +402,9 @@
                             <div id="web-variant-turnkey" class="web-variant lower-bg -turnkey">
                                 <div class="dev-element-block">
                                     <div>
-                                        <h3 class="element-type-heading">Сайты «под ключ» с готовым дизайном</h3>
+                                        <h3 class="element-type-heading">Гарантии. Надежность.</h3>
                                         <div class="text-component">
-                                            <p>Предлагаем большую коллекцию готовых отраслевых решений на выбор,
-                                                разработанных на основе маркетингового подхода к содержанию.</p>
+                                            <p>Договор, в котором указаны полный объем, сроки работ. Заслуженная профессиональная репутация.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -403,20 +495,6 @@
                                 <div class="swiper-pagination"></div>
                             </div>
                         </div>
-                        <div class="testimonial__badges badges">
-                            <div class="badges__item">
-                                <img src="http://cdn.ultatel.com/wp-content/uploads//2022/05/ContactCenter_BestSupport_QualityOfSupport.svg"
-                                    alt="Best Support - Spring 2025">
-                            </div>
-                            <div class="badges__item">
-                                <img src="https://cdn.ultatel.com/wp-content/uploads//2022/05/ContactCenter_HighPerformer_HighPerformer.svg"
-                                    alt="High Performer - Spring 2025">
-                            </div>
-                            <div class="badges__item">
-                                <img src="https://cdn.ultatel.com/wp-content/uploads//2022/05/ContactCenter_MomentumLeader_Leader.svg"
-                                    alt="Momentum Leader - Spring 2025">
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -426,165 +504,69 @@
                 <div class="row g-0">
                     <div class="section-title">
                         <h2 class="ways_txt">FAQs</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta laudantium ipsam
-                            similique
-                            veritatis mollitia nisi est unde illum voluptate esse nulla eveniet, reprehenderit
-                            sapiente
-                            consequuntur saepe provident quas voluptatum eaque!</p>
+                        <!-- если нужно вставить описание для блока -->
+                        <!-- <p></p> -->
                     </div>
                     <div class="accordion">
                         <div class="accordion-item">
-                            <div class="accordion-header active">Lorem ipsum, dolor sit amet consectetur adipisicing
-                                elit. Dolores, alias.<span class="accordion__icon"></span></div>
+                            <div class="accordion-header active">Сколько стоит разработка сайта и от чего зависит цена?<span class="accordion__icon"></span></div>
                             <div class="accordion-content active">
                                 <div class="inner-wrapper">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit veniam quod fugiat ea
-                                    soluta corporis! Saepe, ullam corrupti, consequuntur tenetur delectus illo, eum
-                                    dolorem
-                                    reprehenderit iste quisquam distinctio molestias expedita!
+                                    Стоимость разработки рассчитывается индивидуально и зависит от типа сайта (лендинг, корпоративный, интернет-магазин), его функционала, дизайна и сроков. Мы всегда предлагаем несколько вариантов — от базового до премиум — чтобы вы могли выбрать подходящий бюджет.
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
-                            <div class="accordion-header">Какие технические характеристики возможны у горизонтальных
-                                аппаратов плиточного типа для быстрой заморозки вашего производства?<span
-                                    class="accordion__icon"></span></div>
+                            <div class="accordion-header">Сколько времени занимает создание сайта?<span class="accordion__icon"></span></div>
                             <div class="accordion-content">
                                 <div class="inner-wrapper">
-                                    <p>Компания ООО «Фабрика Холода» занимается <a
-                                            title="производство промышленного холодильного оборудования"
-                                            href="proizvodstvo/">производством промышленного холодильного
-                                            оборудования</a> и предлагает купить горизонтальные плиточные
-                                        скороморозильные аппараты, которые могут иметь следующие технические
-                                        характеристики:</p>
-                                    <ul>
-                                        <li>размеры без кабинета — от 2550х965х1640 в младшей модели до
-                                            3100х1430х2100 в старшей;</li>
-                                        <li>габариты с кабинетом — от 2700х1300х1700 в младшей модели до
-                                            3500х1780х2200 мм в старшей;</li>
-                                        <li>размер плит — от 1680х840 до 2460х1386 мм;</li>
-                                        <li>число плит — от 8 до 13 штук;</li>
-                                        <li>количество блок-форм — от 48 до 180 штук;</li>
-                                        <li>разовая загрузка — от 528 кг до 1980 кг;</li>
-                                        <li>холодопроизводительность — от 26 до 102 кВт при Ткип -40℃;</li>
-                                        <li>объем хладогента в одной плите — от 24 до 59 литров;</li>
-                                        <li>требуемый объем хладогента в одной плите — от 192 до 767 литров.</li>
-                                    </ul>
-                                    <p>Вне зависимости от модели все аппараты оснащаются рамами, которые обработаны
-                                        методом горячего цинкования.</p>
+                                    <p>Средний срок разработки — от 3 до 8 недель. На скорость влияет сложность проекта, количество уникальных страниц, необходимость интеграций и согласований дизайна.</p>
+                                    <p>Мы всегда составляем подробный план работ, чтобы клиент понимал, на каком этапе находится проект. Даже при большом объёме работ мы придерживаемся сроков и информируем клиента о каждом шаге.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
-                            <div class="accordion-header">Для чего подходят плиточные скороморозильные аппараты?<span
-                                    class="accordion__icon"></span></div>
+                            <div class="accordion-header">Делаете ли вы адаптивную верстку и оптимизацию под мобильные устройства?<span class="accordion__icon"></span></div>
                             <div class="accordion-content">
                                 <div class="inner-wrapper">
-                                    <p><a title="Плиточные морозильные аппараты"
-                                            href="catalog/plitochnye-skoromorozilnye-apparaty/">Плиточные
-                                            морозильные аппараты</a>, выпускаемые компанией ООО «Фабрика Холода»,
-                                        подходят для отраслей, в которых требуется быстрая заморозка большого
-                                        количества сырья. Наиболее часто такое холодильное оборудование используется
-                                        в рыболовной сфере. Плиточные аппараты быстро замораживают большой объем
-                                        улова, предотвращая порчу. Техника позволяет замораживать рыбу брикетами,
-                                        упрощая хранение и транспортировку.</p>
-                                    <p>Другая популярная отрасль для плиточных аппаратов — мясная промышленность.
-                                        Они хорошо подходят для шоковой заморозки. Использовать такие аппараты можно
-                                        в том числе для пельменей, котлет и других полуфабрикатов.</p>
-                                    <p>Плиточные аппараты применяются и для заморозки жидких продуктов. Ими
-                                        замораживают кровь, соки, бульоны и различные смеси.</p>
-                                    <p>Для более длительного хранения овощей и фруктов плиточные аппараты тоже
-                                        подходят. Таким образом, адаптировать этот вид морозильного оборудования
-                                        можно под любые ответвления пищевой промышленности.</p>
+                                    <p>Да, все сайты мы разрабатываем по принципу mobile-first. Это значит, что сначала проектируется мобильная версия, а затем адаптация для планшетов и десктопа.</p>
+                                    <p>Мы тестируем страницы на разных устройствах и браузерах, чтобы гарантировать корректное отображение. Кроме того, оптимизируем скорость загрузки, что важно для SEO и удержания пользователей.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
-                            <div class="accordion-header">Как работает гидравлическая и автоматическая система в
-                                горизонтальном плиточном скороморозильном аппарате?<span class="accordion__icon"></span>
-                            </div>
+                            <div class="accordion-header">Можно ли заказать редизайн или доработку существующего сайта?<span class="accordion__icon"></span></div>
                             <div class="accordion-content">
                                 <div class="inner-wrapper">
-                                    <p>Одной из ключевых особенностей данного аппарата является гидравлическая
-                                        система, используемая для подъема плит и поддержания необходимого давления
-                                        на продукты во время замораживания. Эта система обеспечивает эффективное
-                                        распределение давления на всю площадь плит, что способствует равномерному
-                                        замораживанию продуктов.</p>
-                                    <p>Встроенная автоматическая система <a title="плиточный аппарат"
-                                            href="catalog/plitochnye-skoromorozilnye-apparaty/">плиточного
-                                            аппарата</a> имеет следующие особенности:</p>
-                                    <ol>
-                                        <li>предусмотрена система защиты и сигнализации для обнаружения аварийных
-                                            параметров;</li>
-                                        <li>обеспечение постоянного давления в гидросистеме, отвечающей за подъем и
-                                            опускание плит;</li>
-                                        <li>сохранение необходимого уровня давления всасывания на заданном уровне;
-                                        </li>
-                                        <li>система предупреждающих сигналов включает в себя оповещение о правильной
-                                            фазировке при подключении к электросети и предупреждение о недостаточном
-                                            уровне масла.</li>
-                                    </ol>
+                                    <p>Да, мы проводим редизайн и доработку существующих сайтов. Это может быть полное обновление дизайна, добавление новых страниц, внедрение современных технологий и улучшение юзабилити.</p>
+                                    <p>Если у вас сайт устарел визуально или не приносит ожидаемых результатов, мы предложим оптимальное решение для его модернизации без потери текущего контента.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
-                            <div class="accordion-header">Из-за чего могла перегореть основная обмотка электродвигателя
-                                герметичного компрессора?<span class="accordion__icon"></span></div>
+                            <div class="accordion-header">Предоставляете ли вы техническую поддержку после запуска сайта?<span class="accordion__icon"></span></div>
                             <div class="accordion-content">
                                 <div class="inner-wrapper">
-                                    <p>Перегоревшая основная обмотка электродвигателя герметичного компрессора может
-                                        стать причиной его неисправности и требовать дорогостоящего ремонта или
-                                        замены. Эта проблема может возникать по нескольким причинам, связанным с
-                                        эксплуатацией компрессора, его обслуживанием или условиями работы.</p>
-                                    <h6>Перегрузка электродвигателя</h6>
-                                    <p>Одной из главных причин перегоревшей обмотки является перегрузка компрессора.
-                                        Это может происходить, если компрессор работает при условиях, превышающих
-                                        его номинальные параметры. В таких случаях электродвигатель вынужден
-                                        работать на максимальных оборотах, что приводит к перегреву обмотки.</p>
-                                    <p>Перегрузка может быть вызвана рядом факторов:</p>
-                                    <ul type="disc">
-                                        <li>Неисправности в <a title="системы промышленного холодоснабжения"
-                                                href="https://www.fbh.ru/">системе промышленного
-                                                холодоснабжения</a>, такие как утечка хладагента или его низкий
-                                            уровень.</li>
-                                        <li>Несоответствие размеров компрессора требуемой производительности.</li>
-                                        <li>Чрезмерное количество включений и выключений компрессора, что также
-                                            способствует его перегрузке.</li>
-                                    </ul>
-                                    <h6>Плохое теплоотведение</h6>
-                                    <p>Если компрессор работает в условиях недостаточной вентиляции или плохой
-                                        теплоотводящей способности, это также может привести к перегреву обмотки.
-                                        Важно, чтобы компрессор был установлен в месте с хорошей циркуляцией
-                                        воздуха, что поможет эффективно рассеивать тепло, выделяющееся в процессе
-                                        работы. Нарушение работы вентиляционной системы или загрязнение фильтров
-                                        компрессора может вызвать перегрев и перегрузку электродвигателя.</p>
-                                    <h6>Электрические перегрузки и короткие замыкания</h6>
-                                    <p>Перегрузка по току или короткое замыкание могут привести к перегреву и
-                                        повреждению обмоток электродвигателя. Причины этих проблем могут включать:
-                                    </p>
-                                    <ul type="disc">
-                                        <li>неисправности в электрической сети, такие как скачки напряжения, частые
-                                            включения и выключения питания;</li>
-                                        <li>неправильное подключение электродвигателя или неисправность в его
-                                            пусковом устройстве.</li>
-                                    </ul>
-                                    <p>Эти проблемы могут вызвать повышенное сопротивление в обмотке, что, в свою
-                                        очередь, приведет к ее перегреву и выходу из строя.</p>
-                                    <h6>Недостаточное обслуживание компрессора</h6>
-                                    <p>Регулярное техническое обслуживание компрессора — это залог его долгосрочной
-                                        и надежной работы. Невыполнение регулярной проверки и обслуживания системы
-                                        может привести к накоплению грязи, пыли и других загрязнителей, которые
-                                        могут нарушить работу компрессора и привести к его перегрузке. Например,
-                                        засорение фильтров, забитые конденсаторы или испарители могут вызвать
-                                        избыточную нагрузку на компрессор, что в свою очередь приведет к перегреву
-                                        обмотки.</p>
-                                    <h6>Неправильное использование масла для компрессора</h6>
-                                    <p>Масло в герметичном компрессоре выполняет несколько функций, включая смазку и
-                                        охлаждение. Использование некачественного масла или неправильного его уровня
-                                        может привести к повышенному трению в двигателе, что повышает риск перегрева
-                                        и повреждения обмотки. Масло также помогает отводить тепло от электрических
-                                        компонентов, поэтому его дефицит или загрязнение значительно ухудшают работу
-                                        компрессора.</p>
+                                    <p>Да, мы предлагаем разные пакеты поддержки. Это может быть минимальный пакет с исправлением ошибок и обновлением контента или комплексное сопровождение с мониторингом, защитой от атак, регулярными бэкапами и обновлением плагинов.</p>
+                                    <p>Вы можете выбрать тариф исходя из потребностей бизнеса: от разовой помощи до долгосрочного обслуживания.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header">Разрабатываете ли вы сайты с системой управления (CMS)?<span class="accordion__icon"></span></div>
+                            <div class="accordion-content">
+                                <div class="inner-wrapper">
+                                    <p>Да, мы работаем с популярными CMS, такими как WordPress и 1C-Bitrix, а также создаём собственные панели управления для индивидуальных проектов.</p>
+                                    <p>Это позволит вам самостоятельно редактировать тексты, добавлять товары, менять изображения без знаний программирования. Мы проводим обучение и предоставляем инструкции по работе с сайтом.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header">Можно ли интегрировать сайт с CRM, платёжными системами или другими сервисами?<span class="accordion__icon"></span></div>
+                            <div class="accordion-content">
+                                <div class="inner-wrapper">
+                                    <p>Да, мы интегрируем сайты с CRM (amoCRM, Bitrix24), подключаем онлайн-оплаты, формы заявок, мессенджеры и сервисы аналитики. Это автоматизирует бизнес-процессы и экономит время.</p>
+                                    <p>Также мы можем настроить обмен данными между вашим сайтом и складскими системами, подключить SMS-уведомления и интегрировать чат-ботов для обработки заказов.</p>
                                 </div>
                             </div>
                         </div>
@@ -602,44 +584,66 @@
                     </div>
                     <div class="form-container">
                         <div id="form-message" class="form-message" style="display: none;"></div>
-                        <form method="post" class="feedback-form" id="feedback-form" action="" novalidate>
-                            <input type="hidden" id="" name="" value="">
+                        <form method="post" class="feedback-form" id="feedback-form"
+                            novalidate>
+                            <input type="hidden" name="action" value="sendMessage">
+                            <input type="hidden" name="clientAgreement[]" value="Y">
+                            <p id="success_formCallback" class="modals__message" style="display: none;">Ваше обращение успешно зарегистрировано.<br>В ближайшее время мы свяжемся с Вами.</p>
+                            <p id="errors_formCallback" class="modals__message modals__message-errors" style="display: none;"></p>
                             <div class="feedback-form__group">
-                                <input type="text" class="feedback-form__control" id="full_name" name="full_name"
-                                    placeholder="Семен Семенович Горбунков" minlength="10" maxlength="100"
-                                    data-type="fio" required>
-
                                 <label for="full_name" class="feedback-form__label">ФИО <span
                                         class="form__required">*</span></label>
+                                <input type="text" class="feedback-form__control"
+                                    id="full_name" name="clientName"
+                                    placeholder="Семен Семенович Горбунков"
+                                    minlength="10"
+                                    maxlength="100"
+                                    data-type="full_name"
+                                    required>
+
                                 <div class="hs-error-msgs">
                                     <label class="error" for="full_name">Укажите ФИО контактного лица</label>
                                 </div>
                             </div>
                             <div class="feedback-form__fields">
                                 <div class="feedback-form__group">
-                                    <input type="tel" class="feedback-form__control" id="phone" name="phone"
-                                        placeholder="+7 (999) 999-99-99" maxlength="18" data-type="phone" required>
-
                                     <label for="phone" class="feedback-form__label">Телефон <span
                                             class="form__required">*</span></label>
+                                    <input type="tel" class="feedback-form__control"
+                                        id="phone" name="clientPhone"
+                                        placeholder="+7 (999) 999-99-99"
+                                        maxlength="18"
+                                        data-type="phone"
+                                        required>
+
                                     <div class="hs-error-msgs">
                                         <label class="error" for="phone">Укажите номер телефона в формате</label>
                                     </div>
                                 </div>
                                 <div class="feedback-form__group">
-                                    <input type="email" class="feedback-form__control" id="email" name="email"
-                                        placeholder="usermail@mailservice.com" minlength="5" maxlength="100"
-                                        data-type="email" required>
-
                                     <label for="email" class="feedback-form__label">E-mail <span
                                             class="form__required">*</span></label>
+                                    <input type="email" class="feedback-form__control"
+                                        id="email"
+                                        name="clientEmail"
+                                        placeholder="usermail@mailservice.com"
+                                        minlength="5"
+                                        maxlength="100"
+                                        data-type="email"
+                                        required>
+
                                     <div class="hs-error-msgs">
                                         <label class="error" for="email">Укажите адрес электронной почты</label>
                                     </div>
                                 </div>
                             </div>
                             <div class="feedback-form__group">
-                                <select class="feedback-form__control filled" name="topic" id="topic" data-type="select"
+                                <label for="topic" class="feedback-form__label">Тема обращения <span
+                                        class="form__required">*</span></label>
+                                <select class="feedback-form__control"
+                                    name="clientSubject"
+                                    id="topic"
+                                    data-type="select"
                                     required>
                                     <option value="" disabled selected>Выберите тему обращения</option>
                                     <option value="question">Вопрос</option>
@@ -649,55 +653,75 @@
                                     <option value="technical">Техническая проблема</option>
                                     <option value="other">Другое</option>
                                 </select>
-                                <label for="topic" class="feedback-form__label">Тема обращения <span
-                                        class="form__required">*</span></label>
                                 <div class="hs-error-msgs">
                                     <label class="error" for="topic">Пожалуйста, выберите тему обращения</label>
                                 </div>
                             </div>
                             <div class="feedback-form__group">
-                                <textarea id="message" name="message" class="feedback-form__control" rows="8"
-                                    placeholder="Обращение" minlength="10" maxlength="1000" data-type="message"
-                                    required></textarea>
                                 <label for="message" class="feedback-form__label">Обращение <span
                                         class="form__required">*</span></label>
+                                <textarea
+                                    id="message"
+                                    name="clientMessage"
+                                    class="feedback-form__control"
+                                    rows="8"
+                                    placeholder="Обращение"
+                                    minlength="10"
+                                    maxlength="1000"
+                                    data-type="message"
+                                    required></textarea>
+
                                 <div class="hs-error-msgs">
                                     <label class="error" for="message">Напишите текст обращения</label>
                                 </div>
                             </div>
-                            <div class="feedback-form__fields captcha-fields">
-                                <div class="feedback-form__group">
-                                    <div class="captcha-box">
-                                        <img id="captchaImg"
-                                            src="https://maket.pl-llc.ru/bitrix/tools/captcha.php?captcha_sid=0af91e9a38c7c007e8632d6a301af13c"
-                                            alt="">
-                                        <div onclick="" id="reloadCaptcha">
-                                            <img src="https://maket.pl-llc.ru/local/templates/maketlab/frontend/assets/images/icons/refresh-icon.svg"
-                                                width="16" height="16" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="feedback-form__group">
-                                    <input type="text" class="feedback-form__control" id="captcha_word"
-                                        name="captcha_word" value="" minlength="5" maxlength="5" data-type="captcha"
-                                        required>
-
-                                    <label for="captcha_word" class="feedback-form__label">Captcha <span
-                                            class="form__required">*</span></label>
-                                    <div class="hs-error-msgs">
-                                        <label class="error" for="captcha_word">Укажите код</label>
-                                    </div>
-                                </div>
+                            <div class="feedback-form__group">
+                                <input type="hidden"
+                                    class="token"
+                                    id="g-recaptcha-response"
+                                    name="g-recaptcha-response">
+                                <label class="feedback-form__label-t">Отправляя данные, подтверждаю согласие с <a href="./uploads/politika.docx" download="Пользовательское соглашение ProgramWeb"
+                                    target="_blank" class="legal-link">Политикой в области обработки и защиты персональных данных.</a>
                             </div>
                             <div class="feedback-form__group">
-                                <label class="feedback-form__label-t">Отправляя данные, Вы принимаете <a href="/"
-                                        class="legal-link">Пользовательское
-                                        соглашение</a> и <a href="/" class="legal-link">Политику обработки персональных
-                                        данных.</a></label>
+                                <button type="submit"
+                                    class="form-btn btn-default">Отправить</button>
                             </div>
-                            <div class="feedback-form__group">
-                                <button type="submit" class="form-btn btn-default">Отправить</button>
-                            </div>
+                            <script src="https://www.google.com/recaptcha/api.js?render=6LfmgA8pAAAAAH-Qn2UfaUQkvDsGflyV4X0DcU7E"></script>
+                            <script>
+                                grecaptcha.ready(function() {
+                                    if (document.querySelector("form#feedback-form")) {
+                                                grecaptcha.execute("6LfmgA8pAAAAAH-Qn2UfaUQkvDsGflyV4X0DcU7E", {
+                                                action: "add_form"
+                                            })
+                                            .then(function(token) {
+                                                console.log("token:", token);
+                                                [].forEach.call(document.querySelectorAll('input.token'), function(el) {
+                                                    el.value = token;
+                                                });
+                                            })
+                                            .catch(function(error) {
+                                                console.error('reCAPTCHA error:', error);
+                                            });
+                                    }
+                                });
+                                document.getElementById("feedback-form").addEventListener("reset", function() {
+                                    grecaptcha.ready(function() {
+                                                grecaptcha.execute("6LfmgA8pAAAAAH-Qn2UfaUQkvDsGflyV4X0DcU7E", {
+                                                action: "add_form"
+                                            })
+                                            .then(function(token) {
+                                                console.log("token:", token);
+                                                [].forEach.call(document.querySelectorAll('input.token'), function(el) {
+                                                    el.value = token;
+                                                });
+                                            })
+                                            .catch(function(error) {
+                                                console.error('reCAPTCHA error on reset:', error);
+                                            });
+                                    });
+                                });
+                            </script>
                         </form>
                     </div>
                 </div>
@@ -724,9 +748,7 @@
                             </a>
                         </div>
                         <div class="footer__logo_description">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas delectus, repellendus
-                                blanditiis officia corrupti in quis, reprehenderit, tenetur dolor error debitis iure
-                                odit sed suscipit. Consectetur quam optio saepe corrupti.</p>
+                            <p>Мы стремимся создавать проекты, которые не просто красиво выглядят, но и эффективно решают задачи клиентов. Каждая наша работа направлена на развитие бизнеса и улучшение пользовательского опыта.</p>
                         </div>
                     </div>
                     <div class="footer__column_contacts">
@@ -805,12 +827,12 @@
                     <div>
                         <ul class="footer-bottom__list">
                             <li>
-                                <a href="/uploads/soglashenie.docx" download="Пользовательское соглашение ProgramWeb"
+                                <a href="./uploads/soglashenie.docx" download="Пользовательское соглашение ProgramWeb"
                                     class="footer__link" target="_blank"
                                     title="Пользовательское соглашение">Пользовательское соглашение</a>
                             </li>
                             <li>
-                                <a href="/uploads/politika.docx"
+                                <a href="./uploads/politika.docx"
                                     download="Политика в области обработки и защиты персональных данных ProgramWeb"
                                     class="footer__link" target="_blank"
                                     title="Политика в области обработки и защиты персональных данных">Политика в области
@@ -823,6 +845,7 @@
         </div>
     </footer>
     <script src="./assets/scripts/bootstrap.min.js"></script>
+    <script src="./assets/scripts/glightbox.min.js"></script>
     <script src="./assets/scripts/swiper-bundle.min.js"></script>
     <script src="./assets/scripts/script.js"></script>
 </body>
