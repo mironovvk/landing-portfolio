@@ -131,9 +131,17 @@ form.addEventListener("submit", function (e) {
     if (elem.name && elem.dataset.type) {
       switch (elem.dataset.type) {
         case "phone":
-          fieldValue = fieldValue.replace(/[.(),;:!?%#$'\"_=\/\-\s]*/g, "");
-          fieldMask = /^[0-9\+]{8,12}$/i;
+          fieldValue = fieldValue.replace(/\D/g, "");
+          if (fieldValue.startsWith("8")) {
+            fieldValue = "7" + fieldValue.slice(1);
+          }
+          fieldValue = "+" + fieldValue;
+          if (fieldValue.length === 12) {
+            fieldValue = fieldValue.replace(/(\+\d)(\d{3})(\d{3})(\d{2})(\d{2})/, "$1 $2 $3-$4-$5");
+          }
+          fieldMask = /^\+\d{1}\s\d{3}\s\d{3}-\d{2}-\d{2}$/;
           break;
+
 
         case "email":
           fieldMask = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -186,27 +194,21 @@ form.addEventListener("submit", function (e) {
   // console.log("Данные формы:", Object.fromEntries(formData.entries()));
 
   const recaptchaResponse = document.getElementById("g-recaptcha-response").value;
-  const jsonObject = Object.fromEntries(formData.entries());
-  jsonObject["g-recaptcha-response"] = recaptchaResponse;
+  formData.append("g-recaptcha-response", recaptchaResponse);
 
-    fetch('https://www.programweb.studio/contacts.php', {
+   fetch('https://www.programweb.studio/contacts.php', {
     method: form.method,
-    headers: {
-      "Content-Type": "application/json; charset=utf-8",
-    },
-    body: JSON.stringify(jsonObject),
+    body: formData
   })
     .then(response => {
-      if (response.status !== 200) {
+      if (!response.ok) {
         return Promise.reject();
       }
       return response.json();
     })
     .then((data) => {
-      console.log("Ответ сервера (распарсенный JSON):", data);
-      console.log(data);
-      //alert(data.Status);
-      if (data.Status == 'success') {
+      console.log("Ответ сервера:", data);
+      if (data.Status === 'success') {
         form.reset();
         form.querySelector("#success_formCallback").style.display = 'flex';
         form.querySelector("#success_formCallback").innerHTML = 'Ваше обращение успешно зарегистрировано.<br>В ближайшее время мы свяжемся с Вами.';
@@ -214,31 +216,22 @@ form.addEventListener("submit", function (e) {
         form.querySelector("#errors_formCallback").style.display = 'flex';
         form.querySelector("#errors_formCallback").innerHTML = 'Не удалось отправить данные формы. ' + data.Msg;
 
-          grecaptcha.execute("6LfmgA8pAAAAAH-Qn2UfaUQkvDsGflyV4X0DcU7E", { action: "add_form" })
+        grecaptcha.execute("6LfmgA8pAAAAAH-Qn2UfaUQkvDsGflyV4X0DcU7E", { action: "add_form" })
           .then(function (token) {
-            [].forEach.call(document.querySelectorAll('input.token'), function (el) {
-              el.value = token;
-            });
+            document.querySelectorAll('input.token').forEach(el => el.value = token);
           });
       }
 
-
       showSuccessMessage(data.message || "Форма успешно отправлена!", 'success');
-      form.querySelectorAll(".invalid-field").forEach((el) =>
-        el.classList.remove("invalid-field")
-      );
-      console.log("Отправляем на сервер:", jsonObject);
+      form.querySelectorAll(".invalid-field").forEach(el => el.classList.remove("invalid-field"));
     })
     .catch((err) => {
-      // console.error('Ошибка в fetch:', err);
       showSuccessMessage(err.message || "Произошла ошибка при отправке. Попробуйте позже.", 'error');
       form.querySelector("#errors_formCallback").style.display = 'flex';
       form.querySelector("#errors_formCallback").innerHTML = 'Произошла ошибка при отправке. Попробуйте позже.' + err.message;
     });
 
 });
-
-
 
 
 
