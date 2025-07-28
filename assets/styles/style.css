@@ -609,6 +609,7 @@ ul.navbar-nav {
     list-style: none;
     padding: 0;
     margin: 1rem 0 0 1rem;
+    z-index: 1000;
 }
 
 .tags__item {
@@ -629,7 +630,7 @@ ul.navbar-nav {
     max-width: 680px;
     max-height: 492px;
     object-fit: cover;
-    /* object-position: center; */
+    object-position: top;
     border-bottom: 6px solid var(--color-vivid-blue);
 }
 
@@ -1737,5 +1738,9 @@ img#captchaImg {
 
     .tags__item {
         font-size: 8px;
+    }
+    
+    .portfolio-card__image img {
+        max-height: 352px;
     }
 }
