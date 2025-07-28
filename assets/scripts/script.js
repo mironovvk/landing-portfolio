@@ -196,7 +196,7 @@ form.addEventListener("submit", function (e) {
   const recaptchaResponse = document.getElementById("g-recaptcha-response").value;
   formData.append("g-recaptcha-response", recaptchaResponse);
 
-   fetch('https://www.programweb.studio/contacts.php', {
+  fetch('https://www.programweb.studio/contacts.php', {
     method: form.method,
     body: formData
   })
@@ -259,6 +259,8 @@ elementsLowerBg.forEach(el => {
 });
 
 const lightbox = GLightbox({
-  touchNavigation: false,
-  keyboardNavigation: false,
+  selector: '.glightbox',
+  touchNavigation: true,
+  keyboardNavigation: true,
+  loop: false
 });
