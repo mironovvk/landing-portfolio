@@ -537,6 +537,7 @@ ul.navbar-nav {
 }
 
 .portfolio-card__title {
+    color: #0e3c5f;
     font-weight: 700;
     font-size: 2.4rem;
     line-height: 2.875rem;
@@ -840,10 +841,6 @@ ul.navbar-nav {
     text-align: center;
 }
 
-.testimonial .section-title h2 {
-    color: var(--color-vivid-blue);
-}
-
 .testimonial__stars img {
     width: 13%;
 }
@@ -1121,6 +1118,12 @@ ul.navbar-nav {
     margin-bottom: 1.6rem;
 }
 
+.feedback-form__group--center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .gropu_check {
     display: flex;
     align-items: center;
@@ -1129,38 +1132,38 @@ ul.navbar-nav {
 }
 
 .feedback-form__label {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     font-weight: 500;
     margin-bottom: .3rem;
-    /* color: var(--color-black), 75; */
     color: #444;
+}
+
+.feedback-form__label-t {
+    font-size: .875rem;
 }
 
 .feedback-form__control {
     flex-grow: 1;
+    width: 100%;
+    height: calc(3rem + 2px);
+    box-sizing: border-box;
+    position: relative;
+
+    padding: .5rem .75rem;
     text-align: left;
-    padding: .8rem 1.4rem .8rem 1.6rem;
-    transition: box-shadow .1s ease;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #646464b3;
 
     appearance: none;
     background-color: var(--color-white);
-    color: var(--color-black);
-    font-size: 1.2rem;
-    /* font-size: 1rem; */
-    width: 100%;
-    box-sizing: border-box;
-    transition: box-shadow .1s ease;
-    border-radius: 0;
-    min-width: 7rem;
-    position: relative;
-
-
-    /* border: 1.4px solid #cdcdcd; */
-    border: .1rem solid #0009;
-    border-radius: 6px;
+    border: 1px solid #0009;
+    border-radius: .3rem;
     box-shadow: none;
-    color: #646464b3;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
+
 
 input:focus,
 textarea:focus,
@@ -1171,12 +1174,11 @@ select:focus {
 .feedback-form__control:focus {
     background-color: var(--color-white);
     border-color: var(--color-vivid-blue);
-    border-width: 2px;
+    box-shadow: 0 0 0 1px var(--color-vivid-blue);
 }
 
 .feedback-form__control:focus {
     background-color: var(--color-white);
-    /* color: var(--color-vivid-blue); */
     outline: none;
 }
 
