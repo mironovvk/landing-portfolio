@@ -262,5 +262,6 @@ const lightbox = GLightbox({
   selector: '.glightbox',
   touchNavigation: true,
   keyboardNavigation: true,
-  loop: false
+  loop: false,
+  zoomable:false,
 });
