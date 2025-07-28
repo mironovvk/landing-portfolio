@@ -48,7 +48,7 @@
             </div>
         </div>
     </section>
-    <header id="header" class="header__wrapper fixed-top">
+    <header id="header" class="header__wrapper">
         <div class="container">
             <div class="header-row">
                 <div class="navbar-header">
@@ -148,10 +148,10 @@
                                 <div class="portfolio-card__image-wrapper">
                                     <div class="portfolio-card__image">
                                         <ul class="tags">
-                                            <li class="tags__item">#Реклама</li>
-                                            <li class="tags__item">#Seo</li>
-                                            <li class="tags__item">#Дизайн</li>
-                                            <li class="tags__item">#Программирование</li>
+                                            <li class="tags__item">Реклама</li>
+                                            <li class="tags__item">Seo</li>
+                                            <li class="tags__item">Дизайн</li>
+                                            <li class="tags__item">Программирование</li>
                                         </ul>
                                         <img src="./assets/images/cards/portfolio/project1.png" alt="Project preview">
                                     </div>
@@ -210,10 +210,10 @@
                                 <div class="portfolio-card__image-wrapper">
                                     <div class="portfolio-card__image">
                                         <ul class="tags">
-                                            <li class="tags__item">#Разработка</li>
-                                            <li class="tags__item">#Дизайн</li>
-                                            <li class="tags__item">#ВебПортал</li>
-                                            <li class="tags__item">#Поддержка</li>
+                                            <li class="tags__item">Разработка</li>
+                                            <li class="tags__item">Дизайн</li>
+                                            <li class="tags__item">ВебПортал</li>
+                                            <li class="tags__item">Поддержка</li>
                                         </ul>
                                         <img src="./assets/images/cards/portfolio/project2.png" alt="Project preview">
                                     </div>
@@ -272,10 +272,10 @@
                                 <div class="portfolio-card__image-wrapper">
                                     <div class="portfolio-card__image">
                                         <ul class="tags">
-                                            <li class="tags__item">#Разработка</li>
-                                            <li class="tags__item">#Дизайн</li>
-                                            <li class="tags__item">#МобильноеПриложение</li>
-                                            <li class="tags__item">#Реклама</li>
+                                            <li class="tags__item">Разработка</li>
+                                            <li class="tags__item">Дизайн</li>
+                                            <li class="tags__item">МобильноеПриложение</li>
+                                            <li class="tags__item">Реклама</li>
                                         </ul>
                                         <img src="./assets/images/cards/portfolio/project3.png" alt="Project preview">
                                     </div>
@@ -334,10 +334,10 @@
                                 <div class="portfolio-card__image-wrapper">
                                     <div class="portfolio-card__image">
                                         <ul class="tags">
-                                            <li class="tags__item">#Лендинг</li>
-                                            <li class="tags__item">#Верстка</li>
-                                            <li class="tags__item">#Дизайн</li>
-                                            <li class="tags__item">#Программирование</li>
+                                            <li class="tags__item">Лендинг</li>
+                                            <li class="tags__item">Верстка</li>
+                                            <li class="tags__item">Дизайн</li>
+                                            <li class="tags__item">Программирование</li>
                                         </ul>
                                         <img src="./assets/images/cards/portfolio/project4.png" alt="Project preview">
                                     </div>
@@ -397,12 +397,13 @@
                                 <div class="portfolio-card__image-wrapper">
                                     <div class="portfolio-card__image">
                                         <ul class="tags">
-                                            <li class="tags__item">#Готовое решение</li>
-                                            <li class="tags__item">#Дизайн</li>
-                                            <li class="tags__item">#Верстка</li>
-                                            <li class="tags__item">#Интеграция</li>
+                                            <li class="tags__item">Готовое решение</li>
+                                            <li class="tags__item">Дизайн</li>
+                                            <li class="tags__item">Верстка</li>
+                                            <li class="tags__item">Интеграция</li>
                                         </ul>
-                                        <img src="./assets/images/cards/portfolio/project5.png" alt="Project preview">
+                                        <img src="./assets/images/cards/portfolio/project5.png"
+                                            alt="Project preview">
                                     </div>
                                 </div>
                             </div>
@@ -679,14 +680,13 @@
                             рассчитаем стоимость и обозначим сроки работ.</p>
                     </div>
                     <div class="form-container">
-                        <div id="form-message" class="form-message" style="display: none;"></div>
+                        <div id="form-message" class="form-message"></div>
                         <form method="post" class="feedback-form" id="feedback-form" novalidate>
                             <input type="hidden" name="action" value="sendMessage">
                             <input type="hidden" name="clientAgreement[]" value="Y">
-                            <p id="success_formCallback" class="modals__message" style="display: none;">Ваше обращение
+                            <p id="success_formCallback" class="modals__message">Ваше обращение
                                 успешно зарегистрировано.<br>В ближайшее время мы свяжемся с Вами.</p>
-                            <p id="errors_formCallback" class="modals__message modals__message-errors"
-                                style="display: none;"></p>
+                            <p id="errors_formCallback" class="modals__message modals__message-errors"></p>
                             <div class="feedback-form__group">
                                 <label for="full_name" class="feedback-form__label">ФИО <span
                                         class="form__required">*</span></label>
@@ -738,7 +738,7 @@
                                     <label class="error" for="topic">Пожалуйста, выберите тему обращения</label>
                                 </div>
                             </div>
-                            <div class="feedback-form__group  mb-1">
+                            <div class="feedback-form__group  mb-0">
                                 <label for="message" class="feedback-form__label">Сообщение <span
                                         class="form__required">*</span></label>
                                 <textarea id="message" name="clientMessage" class="feedback-form__control" rows="8"
@@ -749,7 +749,7 @@
                                     <label class="error" for="message">Напишите текст обращения</label>
                                 </div>
                             </div>
-                            <div class="feedback-form__group">
+                            <div class="feedback-form__group feedback-form__consent">
                                 <label class="feedback-form__label-t">Отправляя данные, подтверждаю согласие с <a
                                         href="./uploads/politika.docx"
                                         download="Политика в области обработки и защиты персональных данных ProgramWeb"
@@ -849,7 +849,7 @@
                                 web@pl-llc.ru
                             </a>
                         </div>
-                        <div class="footer__widget ">
+                        <div class="footer__widget">
                             <a href="tel:88006006254" class="footer__link" title="Позвоните нам">
                                 <div class="icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -873,7 +873,7 @@
                                 8 (800) 600-62-54
                             </a>
                         </div>
-                        <div class="footer__widget ">
+                        <div class="footer__widget">
                             <a href="tel:88006006254" class="footer__link" title="Позвоните нам">
                                 <div class="icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"

@@ -2,33 +2,16 @@
 //   window.scrollTo(0, 0);
 // });
 
-const topbar = document.getElementById('topbar');
 const header = document.getElementById('header');
-
-
-// Определяем высоту верхней панели (topbar) для дальнейшего использования
-const topbarHeight = topbar.offsetHeight;
-
-// Функция, которая задаёт верхний отступ для шапки (header) равным высоте topbar
-function setHeaderOffset() {
-  let topbarHeight = topbar.offsetHeight;
-  header.style.top = `${topbarHeight}px`;
-}
 
 // Отслеживаем прокрутку страницы
 window.addEventListener('scroll', () => {
-  if (window.scrollY > topbarHeight) {
+  if (window.scrollY > 40) {
     header.classList.add('header_scrolled');
-    header.style.top = 0;
   } else {
     header.classList.remove('header_scrolled');
-    setHeaderOffset();
   }
 });
-
-// Вызываем setHeaderOffset при загрузке страницы и при изменении размера окна
-window.addEventListener('load', setHeaderOffset);
-window.addEventListener('resize', setHeaderOffset);
 
 const darkLogo = document.querySelector('.logo--dark');
 const lightLogo = document.querySelector('.logo--light');
@@ -263,5 +246,5 @@ const lightbox = GLightbox({
   touchNavigation: true,
   keyboardNavigation: true,
   loop: false,
-  zoomable:false,
+  zoomable: false,
 });
