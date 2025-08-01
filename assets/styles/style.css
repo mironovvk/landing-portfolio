@@ -197,17 +197,6 @@ a {
     color: #fff;
 }
 
-.bg-blue .h1,
-.bg-blue h1 {
-    font-size: 3.8rem;
-    font-weight: 600;
-    line-height: 4.3rem;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 0;
-    color: currentColor;
-}
-
 .bg-blue {
     background-color: var(--color-vivid-blue);
 }
@@ -558,28 +547,38 @@ ul.navbar-nav {
     color: var(--color-white);
 }
 
+.l-section-kbs {
+    margin: 71px 0 40px 0;
+}
+
+.l-section-kbs .h1,
+.l-section-kbs h1 {
+    font-size: 3.8rem;
+    font-weight: 600;
+    line-height: 4.3rem;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0;
+    color: currentColor;
+}
 
 @media (min-width: 62rem) {
-    .l-section-kbs {
-        margin: 71px 0 40px 0;
-    }
-
-    [class*=bg-].l-section-kbs.-left .l-section-kbs__outer {
-        padding-top: 0;
+    [class*=bg-].l-section-kbs .l-section-kbs__outer {
+        padding-top: 2.125rem;
         padding-bottom: 2.125rem;
-    }
-
-    .l-section-kbs.-left .l-section-kbs__outer {
-        max-width: 40rem;
     }
 }
 
 @media (max-width: 61.98rem) {
-    [class*="bg-"].l-section-kbs.-left .l-section-kbs__outer {
+    [class*="bg-"].l-section-kbs .l-section-kbs__outer {
         padding-top: 1.313rem;
         padding-bottom: 1.313rem;
     }
 }
+
+
+
+
 
 
 /* стили блока портфолио */
@@ -591,11 +590,11 @@ ul.navbar-nav {
     display: flex;
     flex-direction: column;
     row-gap: 4rem;
-    counter-reset: card;
+    counter-reset: portfolio_card;
 }
 
 .portfolio-card {
-    counter-increment: card;
+    counter-increment: portfolio_card;
     position: relative;
 }
 
@@ -620,7 +619,7 @@ ul.navbar-nav {
 
 .portfolio-card__body-inner::before {
     color: #252525;
-    content: "0" counter(card);
+    content: "0" counter(portfolio_card);
     position: absolute;
     font-family: var(--font-main);
     font-size: 20rem;
@@ -773,155 +772,263 @@ ul.navbar-nav {
 
 
 /* Стили блока с преимуществами */
-#advantages-block {
-    background: radial-gradient(circle, #3d9be9 0%, #1d7ecf 100%);
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    padding-top: 80px;
-    padding-bottom: 80px;
-}
-
-#advantages-block * {
+.trust-block {
+    background: var(--color-vivid-blue);
     color: var(--color-white);
 }
 
-.choose-variant {
+.trust-block .section-title * {
+    color: var(--color-white);
+}
+
+.trust-block__categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.trust-category {
     display: flex;
     flex-direction: column;
-    line-height: 1.4;
-    tab-size: 3;
-    box-sizing: inherit;
-    max-width: 780px;
+    align-items: center;
+    justify-content: start;
+    text-align: center;
+    padding: 0 0;
+    gap: 1rem;
 }
 
-.choose-variant__halve {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    z-index: 50;
-    column-gap: 10rem;
-    flex-wrap: nowrap;
+.trust-category:not(:first-child) {
+    border-left: 1px solid #fff;
+    padding-left: 2rem;
 }
 
-.choose-variant__halve:first-of-type {
-    border-bottom: 1px solid var(--color-pale-blue);
-    margin-bottom: 3.7rem;
+.trust-category__icon svg {
+    fill: currentColor;
+    width: 40px;
+    height: 40px;
 }
 
-.choose-variant__halve:first-of-type h2 {
-    font-weight: 700;
-    font-size: 2.4rem;
-}
-
-.choose-variant__halve:first-of-type p {
-    font-weight: 400;
-    font-size: 1.15rem;
-    margin: 1.75rem auto 0;
-    color: var(--color-deep-indigo);
-}
-
-.web-variant {
-    width: 46%;
-}
-
-.text-component {
-    margin-bottom: 2em;
-    overflow: hidden;
-    font-size: 1.125rem;
-    font-weight: 500;
-}
-
-.choose-variant .text-component {
-    line-height: 1.5;
-    margin-bottom: 3.7rem;
-    font-weight: normal;
-}
-
-.text-component p {
-    margin: 1rem 0;
-}
-
-.text-component p:first-child {
-    margin-top: 0;
-}
-
-.text-component p:last-child {
+.trust-category h3 {
     margin-bottom: 0;
 }
 
-.element-type-heading {
+
+
+
+
+
+/* блок как мы работаем вариант 1 */
+/* .workflow__wrapper {
+    counter-reset: work_card;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    gap: 1rem;
-    font-size: 1.6rem;
-    font-weight: 500;
-    margin-bottom: 1.7rem;
-    min-height: 64px;
+    align-content: center;
+    row-gap: 2rem;
 }
 
-.element-type-heading:after {
-    display: inline-block;
-    content: "";
-    width: 50px;
-    height: 50px;
-    box-sizing: inherit;
-    flex-shrink: 0;
-    transition: transform .3s ease-in-out;
-    background-size: contain !important;
+.workflow__card {
+    counter-increment: work_card;
+    padding: 48px 30px 24px 24px;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+    color: #212529;
+    box-shadow: #4458901f 2px 0px 35px 0px;
+    transition: ease-in-out 0.3s;
 }
 
-.web-variant.-web-dev .element-type-heading::after {
-    background: url('../images/icons/advantages/service-white.svg') no-repeat;
+.workflow__card:hover {
+    box-shadow: 5px 6px 10px #78abd8;
 }
 
-.web-variant.-frontend .element-type-heading::after {
-    background: url('../images/icons/advantages/service_frontend.svg') no-repeat;
+@media (min-width: 991.98px) {
+    .workflow__card {
+        width: 48%;
+    }
 }
 
-.web-variant.-seo .element-type-heading::after {
-    background: url('../images/icons/advantages/service_seo.svg') no-repeat;
-}
-
-.web-variant.-turnkey .element-type-heading::after {
-    background: url('../images/icons/advantages/service-white.svg') no-repeat;
-}
-
-.choose-variant.bg-down .-web-dev:hover .element-type-heading::after,
-.choose-variant.bg-up .-frontend:hover .element-type-heading::after,
-.choose-variant.bg-up .-seo:hover .element-type-heading::after,
-.choose-variant.bg-down .-turnkey:hover .element-type-heading::after {
-    transform: scale(1.2);
-}
-
-.choose-variant:after {
-    width: 2000px;
-    height: 927px;
+.workflow__card::before {
+    content: counter(work_card);
+    background-color: var(--color-vivid-blue);
+    clip-path: polygon(0% 0%, 100% 0, 100% 93%, 35% 100%, 0% 100%);
+    color: var(--color-white);
+    font-size: 24px;
+    min-width: 48px;
+    min-height: 48px;
+    line-height: 48px;
     position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+}
+
+.workflow__card::after {
     content: "";
-    right: 0;
+    position: absolute;
+    top: 0;
+    right: 3rem;
     bottom: 0;
-    background: transparent url('../images/backgrounds/choose-variant-bg.png');
+    width: 80px;
+    background-position: center right;
     background-repeat: no-repeat;
-    background-position: 50% 0;
-    transform-origin: 45% 110%;
-    transition: background-position .6s;
-    transform: translate(50%) rotate(-45deg);
-    background-size: cover;
-    animation-duration: .4s;
-    animation-delay: .5s;
-    filter: drop-shadow(0px -10px 10px #00000080);
-    animation-iteration-count: 1;
+    background-size: contain;
+    opacity: .15;
+    pointer-events: none;
+    z-index: 2;
 }
 
-.choose-variant.bg-up:after {
-    background-position-x: 90%;
+.workflow__card#research::after {
+    background-image: url('../images/backgrounds/workflow/icon-research.png');
 }
 
-.choose-variant.bg-down:after {
-    background-position-x: 10%;
+.workflow__card#design::after {
+    background-image: url('../images/backgrounds/workflow/icon-design.png');
 }
+
+.workflow__card#layout::after {
+    background-image: url('../images/backgrounds/workflow/icon-layout.png');
+}
+
+.workflow__card#development::after {
+    background-image: url('../images/backgrounds/workflow/icon-development.png');
+}
+
+.workflow__card#testing::after {
+    background-image: url('../images/backgrounds/workflow/icon-testing.png');
+}
+
+.workflow__card#presentation::after {
+    background-image: url('../images/backgrounds/workflow/icon-presentation.png');
+}
+
+.workflow__card#training::after {
+    background-image: url('../images/backgrounds/workflow/icon-training.png');
+}
+
+.workflow__card#delivery::after {
+    background-image: url('../images/backgrounds/workflow/icon-delivery.png');
+}
+
+
+.workflow-card__title {
+    padding-bottom: 0;
+    line-height: 140%;
+    width: 80%;
+}
+
+.workflow-card__text {
+    font-size: 1.2rem;
+    line-height: 140%;
+    padding-right: 160px;
+    margin-bottom: 24px;
+} */
+
+
+
+
+
+/* блок как мы работаем вариант  */
+.workflow * {
+    position: relative;
+}
+
+.workflow__wrapper {
+    counter-reset: work_card;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    column-gap: 1rem;
+    row-gap: 2rem;
+    z-index: 0;
+    position: relative;
+}
+
+.workflow__card {
+    counter-increment: work_card;
+    padding: 45px 68px 20px;
+    max-width: 100%;
+    width: 100%;
+    position: relative;
+    color: var(--color-deep-indigo);
+    transition: clip-path .2s linear;
+    background: radial-gradient(circle, #ffffff 1%, #dbe9ff 100%);
+}
+
+@media (min-width: 991.98px) {
+    .workflow__card {
+        width: 49%;
+    }
+}
+
+.workflow__card:before {
+    content: counter(work_card);
+    background-color: var(--color-vivid-blue);
+    clip-path: polygon(0% 0%, 100% 0, 100% 93%, 35% 100%, 0% 100%);
+    color: var(--color-white);
+    font-size: 24px;
+    min-width: 48px;
+    min-height: 48px;
+    line-height: 48px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+}
+
+.workflow__card:nth-child(odd):before {
+    left: 6%;
+}
+
+.workflow__card:nth-child(even):before {
+    right: 6%;
+}
+
+@media (min-width: 1199.98px) {
+    .workflow__wrapper::after {
+        content: "";
+        background: url(../images/logo/logo.svg) no-repeat center center;
+        background-size: contain;
+        position: absolute;
+        top: 50%;
+        left: 52%;
+        width: 100px;
+        height: 100px;
+        transform: translate(-74%, -45%);
+        z-index: 1;
+        filter: drop-shadow(0 4px 4px #00000066);
+    }
+}
+
+.workflow__card:nth-child(1n) {
+    clip-path: polygon(0 0, 100% 0, 98% 100%, 2% 100%);
+}
+
+.workflow__card:nth-child(2n) {
+    clip-path: polygon(2% 0, 98% 0, 100% 100%, 0% 100%);
+}
+
+.workflow__card:nth-child(3n) {
+    clip-path: polygon(2% 0, 98% 0, 100% 100%, 0% 100%);
+}
+
+.workflow__card:nth-child(4n) {
+    clip-path: polygon(0 0, 100% 0, 98% 100%, 2% 100%);
+}
+
+.workflow-card__title {
+    padding-bottom: 0;
+    line-height: 140%;
+}
+
+.workflow-card__text {
+    font-size: 1.2rem;
+    line-height: 140%;
+    margin-bottom: 24px;
+}
+
+
+
 
 
 
@@ -1414,12 +1521,33 @@ select:focus {
 }
 
 .banner-brif__row {
-    background: radial-gradient(circle, #3d9be9 0%, #1d7ecf 100%);
     display: flex;
     flex-direction: row;
     align-items: stretch;
+    justify-content: stretch;
     color: var(--color-white);
     overflow: hidden;
+    position: relative;
+    background: url(../images/banners/brif-banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner-brif__row::before {
+    content: "";
+    background: radial-gradient(circle, #3d9be9 0%, #1d7ecf 100%);
+    opacity: .90;
+    position: absolute;
+    clip-path: polygon(0 0, 60% 0, 50% 100%, 0% 100%);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all .25s linear;
+}
+
+.banner-brif.hover .banner-brif__row::before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 .banner__text-col {
@@ -1430,6 +1558,8 @@ select:focus {
     flex-direction: column;
     justify-content: center;
     row-gap: 1rem;
+    position: relative;
+    z-index: 10;
 }
 
 .banner__text-col p {
@@ -1446,14 +1576,11 @@ p:not(.has-background):last-of-type {
 
 .banner__image-col {
     max-width: 100%;
+    width: 100%;
+    float: right;
     height: auto;
-}
-
-@media only screen and (min-width: 991.5px) {
-    .banner__image-col {
-        width: 50%;
-        clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
-    }
+    transition: clip-path .3s ease-in;
+    display: none;
 }
 
 .banner__image {
@@ -1464,6 +1591,9 @@ p:not(.has-background):last-of-type {
     object-position: center right;
     border-radius: 0 .15rem .15rem 0;
 }
+
+
+
 
 
 
@@ -1649,9 +1779,6 @@ p:not(.has-background):last-of-type {
 
 /* Средние устройства (планшеты, менее 992px) */
 @media (max-width: 991.98px) {
-    /* .bg-blue {
-        padding-top: 95px;
-    } */
 
     .choose-variant__halve:first-of-type h2,
     .section-title h2 {
@@ -1711,6 +1838,26 @@ p:not(.has-background):last-of-type {
         width: 100%;
     }
 
+    .trust-block__categories {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .trust-category:not(:first-child)::before {
+        content: "";
+        background-color: #fff;
+        width: 60%;
+        height: 1px;
+        margin-bottom: 1rem;
+    }
+
+    .trust-category:not(:first-child) {
+        border-left: none;
+        padding-left: 0;
+    }
+
     .icon {
         width: 26px;
         height: 26px;
@@ -1718,6 +1865,11 @@ p:not(.has-background):last-of-type {
 
     .banner-brif__row {
         flex-direction: column-reverse;
+        background: radial-gradient(circle, #3d9be9 0%, #1d7ecf 100%);
+    }
+
+    .banner-brif__row::before {
+        display: none;
     }
 
     .banner__text-col,
@@ -1728,6 +1880,16 @@ p:not(.has-background):last-of-type {
     .banner__text-col {
         align-items: center;
         text-align: center;
+    }
+
+    .banner__text-col p {
+        line-height: 1.4;
+        font-size: 1.215rem;
+    }
+
+    .banner__image-col {
+        display: inline;
+        height: 200px;
     }
 
     .footer__top {
@@ -1916,5 +2078,9 @@ p:not(.has-background):last-of-type {
 
     .portfolio-card__image img {
         max-height: 352px;
+    }
+
+    .workflow-card__text {
+        padding-right: 100px;
     }
 }

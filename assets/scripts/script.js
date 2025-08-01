@@ -219,28 +219,19 @@ form.addEventListener("submit", function (e) {
 
 
 // БЛОК С ПРЕИМУЩЕСТВАМИ
-const chooseVariant = document.getElementById('choose-variant');
-const elementsRaiseBg = document.querySelectorAll('.raise-bg');
-const elementsLowerBg = document.querySelectorAll('.lower-bg');
+const banner_brif = document.querySelector('.banner-brif');
 
-elementsRaiseBg.forEach(el => {
-  el.addEventListener('mouseenter', () => {
-    chooseVariant.classList.add('bg-up');
-  });
-  el.addEventListener('mouseleave', () => {
-    chooseVariant.classList.remove('bg-up');
-  });
+banner_brif.addEventListener('mouseenter', () => {
+  banner_brif.classList.add('hover');
 });
 
-elementsLowerBg.forEach(el => {
-  el.addEventListener('mouseenter', () => {
-    chooseVariant.classList.add('bg-down');
-  });
-  el.addEventListener('mouseleave', () => {
-    chooseVariant.classList.remove('bg-down');
-  });
+banner_brif.addEventListener('mouseleave', () => {
+  banner_brif.classList.remove('hover');
 });
 
+
+
+// ПРОСМОТР ОТЗЫВОВ
 const lightbox = GLightbox({
   selector: '.glightbox',
   touchNavigation: true,
