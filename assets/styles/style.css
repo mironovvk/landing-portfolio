@@ -548,7 +548,8 @@ ul.navbar-nav {
 }
 
 .l-section-kbs {
-    margin: 71px 0 40px 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 .l-section-kbs .h1,
@@ -563,9 +564,17 @@ ul.navbar-nav {
 }
 
 @media (min-width: 62rem) {
+    .l-section-kbs {
+        margin: 71px 0 40px 0;
+    }
+
     [class*=bg-].l-section-kbs .l-section-kbs__outer {
-        padding-top: 2.125rem;
+        padding-top: 0;
         padding-bottom: 2.125rem;
+    }
+
+    .l-section-kbs .l-section-kbs__outer {
+        max-width: 40rem;
     }
 }
 
@@ -1779,6 +1788,24 @@ p:not(.has-background):last-of-type {
 
 /* Средние устройства (планшеты, менее 992px) */
 @media (max-width: 991.98px) {
+    .l-section-kbs {
+        margin-top: 71px;
+    }
+
+    .l-section-kbs .h1,
+    .l-section-kbs h1 {
+        line-height: 1.5;
+    }
+
+    .breadcrumb {
+        padding: 0;
+        margin-bottom: 1rem;
+    }
+
+    [class*=bg-].l-section-kbs .l-section-kbs__outer {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
 
     .choose-variant__halve:first-of-type h2,
     .section-title h2 {
