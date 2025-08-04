@@ -1040,123 +1040,120 @@ ul.navbar-nav {
 
 
 
-
-/* стили для блока отзывов */
-.testimonial {
-    background: #FFFFFF;
-    background: radial-gradient(circle, #ffffff 20%, #dbe9ff 100%);
-    text-align: center;
-}
-
-.testimonial_container {
+/* блок с тарифами */
+.pricing-wrapper {
     display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-}
-
-.testimonial__title {
-    text-align: center;
-}
-
-.testimonial__stars img {
-    width: 13%;
-}
-
-.elementor-testimonial {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    height: 100%;
-}
-
-.testimonial__quote {
-    color: var(--color-deep-indigo);
-    width: 75%;
-    margin: 30px auto;
-    font-weight: 400;
-    font-size: 1.2rem;
-    text-align: center;
-}
-
-.testimonial__author {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
-    gap: 15px;
 }
 
-.testimonial__image img {
-    padding: 0;
-    margin: 0;
-    min-height: 50px;
-    max-height: 60px;
-    max-width: 140px;
+.pricing-card {
+    padding: 2.8125rem 2.1875rem;
+    max-width: 100%;
     width: 100%;
-    vertical-align: middle;
-}
-
-.author__info {
-    text-align: left;
-    color: var(--color-black);
-}
-
-.author__name {
-    font-weight: 700;
-    font-size: 16px;
-    margin: 0;
-}
-
-.author__role {
-    font-size: 14px;
-}
-
-.testimonial__badges {
-    display: none;
-    justify-content: space-between;
-    gap: 40px;
-    width: 100%;
-    max-width: 700px;
-    margin: 32px auto 0;
-    position: relative;
-}
-
-.badges__item {
-    width: 22%;
-}
-
-.badges__item img {
-    width: 100%;
-    height: 100%;
-    display: block;
-}
-
-.swiper {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-deep-indigo);
+}
+
+@media (min-width: 991.98px) {
+    .pricing-card {
+        width: 33.333%;
+    }
+}
+
+.pricing-card:nth-child(odd) {
+    background-color: #f7faff;
+}
+
+.pricing-card:nth-child(even) {
+    box-shadow: 0 0 27px 0 #0c0c0c0d;
+}
+
+.pricing-card__title {
+    padding-bottom: 0;
+    margin-bottom: 40px;
+    line-height: 140%;
+    text-align: center;
+}
+
+.pricing-card__price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    font-weight: 700;
+    font-size: 3rem;
+    flex-wrap: wrap;
+    color: var(--color-vivid-blue);
+    vertical-align: middle;
+    margin-bottom: 40px;
+}
+
+.pricing-card__price * {
+    margin: 0;
+}
+
+.pricing-card__price span {
+    font-size: 1.75rem;
+    float: inline-start;
+    padding-bottom: 10px;
+}
+
+.pricing-card__price::after {
+    content: url(../images/icons/pricing/ruble.svg);
+}
+
+.pricing-card__subtitle {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.list-title {
     width: 100%;
-    height: 100%;
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 1.3rem;
 }
 
-.swiper-slide {
-    padding: 0 20px 20px;
+.pricing-card__features {
+    margin-bottom: 40px;
 }
 
-.swiper-pagination {
-    top: 0 !important;
-    bottom: 0 !important;
-    position: relative;
-    height: 30px;
+.pricing-card ul {
+    margin-left: 30px;
+    padding-left: 0;
+    list-style: none;
 }
 
-.swiper-pagination-bullet-active {
-    background-color: var(--color-vivid-blue);
+.pricing-card ul>li {
+    padding-top: .5rem;
+    /* text-align: center; */
 }
 
+.pricing-card ul>li:first-child {
+    /* padding-top: 0; */
+}
 
+.pricing-card ul>li:not(:first-child) {
+    /* padding-bottom: calc(1rem / 2); */
+}
 
+.pricing-card ul>li:last-child {
+    padding-bottom: 0;
+}
+
+.pricing-card ul>li::before {
+    content: "\25A0";
+    display: inline-block;
+    margin-left: -20px;
+    width: 20px;
+    font-size: 12px;
+    color: var(--color-vivid-blue);
+}
 
 
 
@@ -1784,6 +1781,15 @@ p:not(.has-background):last-of-type {
     .entry-header-intro {
         font-size: 2.25rem;
     }
+
+    .pricing-card__title {
+        margin-bottom: 20px;
+    }
+
+    .pricing-card__price {
+        margin-bottom: 20px;
+        font-size: 2.6rem;
+    }
 }
 
 /* Средние устройства (планшеты, менее 992px) */
@@ -1855,6 +1861,10 @@ p:not(.has-background):last-of-type {
     .choose-variant:after {
         width: 1250px;
         height: 540px;
+    }
+
+    .pricing-card__price {
+        font-size: 3rem;
     }
 
     .accordion {
@@ -2068,14 +2078,6 @@ p:not(.has-background):last-of-type {
         margin-bottom: 1rem;
     }
 
-    .testimonial .section-title p {
-        width: 100%;
-    }
-
-    .testimonial__quote {
-        width: 100%;
-    }
-
     .feedback-form__fields {
         display: block;
     }
@@ -2109,5 +2111,9 @@ p:not(.has-background):last-of-type {
 
     .workflow-card__text {
         padding-right: 100px;
+    }
+
+    .pricing-card__price {
+        font-size: 2.6rem;
     }
 }
