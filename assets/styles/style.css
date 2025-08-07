@@ -535,6 +535,10 @@ ul.navbar-nav {
     text-decoration: none;
 }
 
+.breadcrumb-item a:hover {
+    color: #e7e7e7bf;
+}
+
 .breadcrumb-item+.breadcrumb-item::before {
     float: left;
     padding-right: 0.5rem;
@@ -1250,7 +1254,7 @@ ul.navbar-nav {
     inset: 0;
     background-color: #ffffff;
     z-index: 0;
-    transition: background-color 0.125s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .site-type__card:hover:before {
@@ -1283,7 +1287,6 @@ ul.navbar-nav {
 }
 
 .site-type__title {
-    /* color: var(--color-vivid-blue); */
     color: var(--color-deep-indigo);
     margin-bottom: 0;
 }
@@ -1400,12 +1403,22 @@ ul.navbar-nav {
     justify-content: start;
     align-items: stretch;
     max-width: 100%;
+    width: 100%;
     min-height: 184px;
     box-shadow: 2px 0 35px 0 #4458901f;
+    transition: ease-in-out all .35s;
+}
 
+.site-types__card:hover {
+    box-shadow: 5px 6px 10px #78abd8;
+}
+
+.site-types__card:hover img {
+    transform: scale(1.05);
 }
 
 .card-type__icon {
+    overflow: hidden;
     max-width: 100%;
     width: 40%;
     background-color: var(--color-vivid-blue);
@@ -1416,6 +1429,7 @@ ul.navbar-nav {
     height: 100%;
     object-fit: cover;
     opacity: .35;
+    transition: all 0.4s ease-in-out;
 }
 
 .card-type__text {
@@ -1430,7 +1444,7 @@ ul.navbar-nav {
 }
 
 .card-type__title {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     text-transform: uppercase;
     color: var(--color-vivid-blue);
 }
@@ -1443,12 +1457,15 @@ ul.navbar-nav {
     .site-types__content {
         width: 40%;
         padding-left: 0;
+        padding-right: 2rem;
         align-items: start;
     }
 
     .site-types__cards {
         width: 60%;
     }
+
+    .site-types__card {}
 
     .site-types__column {
         width: 48%;
@@ -1459,6 +1476,9 @@ ul.navbar-nav {
         text-align: left;
     }
 } */
+
+
+
 
 
 
@@ -1848,7 +1868,8 @@ select:focus {
 
 .banner-brif__row::before {
     content: "";
-    background: radial-gradient(circle, #3d9be9 0%, #1d7ecf 100%);
+    /* background: radial-gradient(circle, #3d9be9 0%, #1d7ecf 100%); */
+    background: var(--color-vivid-blue);
     opacity: .90;
     position: absolute;
     clip-path: polygon(0 0, 60% 0, 50% 100%, 0% 100%);
@@ -2436,8 +2457,18 @@ p:not(.has-background):last-of-type {
         max-height: 352px;
     }
 
+    .workflow__card {
+        padding: 45px 32px 20px;
+    }
+
+    /* вариант 1 */
     .workflow-card__text {
         padding-right: 100px;
+    }
+
+    /* вариант 2 */
+    .workflow-card__text {
+        padding-right: 0;
     }
 
     .pricing-card__price {
