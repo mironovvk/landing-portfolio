@@ -1,8 +1,23 @@
+'use strict';
 // window.addEventListener('load', () => {
 //   window.scrollTo(0, 0);
 // });
 
+const topbar = document.getElementById('topbar');
 const header = document.getElementById('header');
+
+// Определяем высоту верхней панели (topbar) для дальнейшего использования
+const topbarHeight = topbar.offsetHeight;
+
+// Функция, которая задаёт верхний отступ для шапки (header) равным высоте topbar
+function setHeaderOffset() {
+  let topbarHeight = topbar.offsetHeight;
+  header.style.top = `${topbarHeight}px`;
+}
+
+// Вызываем setHeaderOffset при загрузке страницы и при изменении размера окна
+window.addEventListener('load', setHeaderOffset);
+window.addEventListener('resize', setHeaderOffset);
 
 // Отслеживаем прокрутку страницы
 window.addEventListener('scroll', () => {
@@ -41,7 +56,6 @@ const swiper = new Swiper(".mySwiper", {
   },
 });
 
-
 // БЛОК С АККОРДЕОНОМ
 document.querySelectorAll('.accordion-header').forEach(header => {
   header.addEventListener('click', () => {
@@ -65,12 +79,12 @@ const mask = new IMask(element, maskOptions);
 function showSuccessMessage(textContent, className) {
   const messageBox = document.getElementById("form-message");
 
-  setTimeout(function () {
+  setTimeout(() => {
     messageBox.style.display = 'block';
     messageBox.textContent = textContent;
     messageBox.className = `form-message ${className}`;
 
-    setTimeout(function () {
+    setTimeout(() => {
       messageBox.style.display = 'none';
     }, 3000);
 
@@ -95,7 +109,7 @@ messageBox.style.display = "none";
 messageBox.textContent = "";
 messageBox.classList.remove("success", "error");
 
-form.addEventListener("submit", function (e) {
+form.addEventListener("submit", (e) => {
   const checkTest = [];
   const elements = form.querySelectorAll("input[name], select[name], textarea[name]");
   let formData = new FormData();
@@ -200,7 +214,7 @@ form.addEventListener("submit", function (e) {
         form.querySelector("#errors_formCallback").innerHTML = 'Не удалось отправить данные формы. ' + data.Msg;
 
         grecaptcha.execute("6LfmgA8pAAAAAH-Qn2UfaUQkvDsGflyV4X0DcU7E", { action: "add_form" })
-          .then(function (token) {
+          .then((token) => {
             document.querySelectorAll('input.token').forEach(el => el.value = token);
           });
       }
@@ -219,7 +233,7 @@ form.addEventListener("submit", function (e) {
 
 
 // БЛОК С ПРЕИМУЩЕСТВАМИ
-const banner_brif = document.querySelector('.banner-brif');
+const banner_brif = document.querySelector('.banner-brif__row');
 
 banner_brif.addEventListener('mouseenter', () => {
   banner_brif.classList.add('hover');
