@@ -589,7 +589,7 @@ ul.navbar-nav {
 }
 
 .breadcrumb-item {
-    font-size: .95rem;
+    font-size: .95em;
     font-weight: 400;
 }
 
@@ -768,15 +768,26 @@ ul.navbar-nav {
     max-width: 100%;
     position: relative;
     top: 0;
-    padding: 1.5rem;
+    /* padding: 1.5rem; */
     transition: all .3s ease-in;
 }
 
 .portfolio-card__image {
     display: inline-block;
-    box-shadow: 2px 0 35px 0 #00000059;
-    width: 100%;
+    /* width: 100%; */
+    /* margin: 1.5rem; */
     overflow: hidden;
+    margin: 1.5rem;
+    transition: all .2s ease-in-out;
+    box-shadow: 2px 0 35px 0 #00000059;
+}
+
+.portfolio-card__image:hover {
+    margin: 0 0 3rem 3rem;
+}
+
+.portfolio-card:nth-child(even) .portfolio-card__image:hover {
+    margin: 0 3rem 3rem 0;
 }
 
 .portfolio-card__image::before {
@@ -786,28 +797,28 @@ ul.navbar-nav {
     height: 55%;
     background: 0 0;
     border: 2px solid var(--color-vivid-blue);
-    top: .2rem;
-    right: 0rem;
+    top: 0;
+    right: 0;
     z-index: -1;
 }
 
 .portfolio-card__image img {
     width: 100%;
     height: auto;
-    max-width: 680px;
-    max-height: 492px;
+    max-width: 600px;
+    max-height: 480px;
     object-fit: cover;
     vertical-align: middle;
     transition: all .2s ease-in;
 }
 
-.portfolio-card__image-wrapper:hover .portfolio-card__image img {
-    transform: scale(1.05);
-}
+/* .portfolio-card__image-wrapper:hover .portfolio-card__image img {
+    transform: scale(1.04);
+} */
 
 .portfolio-card:nth-child(even) .portfolio-card__image::before {
-    top: .2rem;
-    left: 0rem;
+    top: 0;
+    left: 0;
 }
 
 .tags {
@@ -1426,6 +1437,8 @@ ul.navbar-nav {
     border: none !important;
 }
 
+.accordion-item:hover {}
+
 .accordion-header {
     cursor: pointer;
     align-items: center;
@@ -1441,6 +1454,11 @@ ul.navbar-nav {
     text-align: left;
     width: 100%;
     min-height: 54px;
+    transition: all .16s ease-in-out;
+}
+
+.accordion-header:hover {
+    background: #eaf1fd;
 }
 
 .accordion__icon {
@@ -1456,6 +1474,11 @@ ul.navbar-nav {
 .accordion-header.active .accordion__icon {
     transform: translateY(-50%) rotate(45deg);
 }
+
+/* .accordion-header:not(.active):hover .accordion__icon {
+    transform: translateY(-50%) rotate(25deg);
+} */
+
 
 .accordion__icon::before,
 .accordion__icon::after {
