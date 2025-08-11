@@ -350,6 +350,11 @@ a {
     font-size: 1.2rem;
     line-height: 1.55;
     font-weight: 400;
+
+    font-size: 1.0625rem;
+    line-height: 1.55;
+    font-weight: 400;
+    
     margin: 0 auto;
     color: var(--color-deep-indigo);
     padding: 0;
@@ -735,7 +740,7 @@ section.breadcrumb-block {
 }
 
 .portfolio-card__body-inner::before {
-    color: hsla(208, 73%, 43%, 0.035);
+    color: rgba(30, 115, 190, .035);
     content: "0" counter(portfolio_card);
     position: absolute;
     font-family: var(--font-main);
@@ -816,11 +821,11 @@ section.breadcrumb-block {
     /* box-shadow: 2px 0 20px 0 #00000059; */
 }
 
-.portfolio-card__image:hover {
+.portfolio-card__image-wrapper:hover .portfolio-card__image {
     margin: 0 0 3rem 3rem;
 }
 
-.portfolio-card:nth-child(even) .portfolio-card__image:hover {
+.portfolio-card:nth-child(even) .portfolio-card__image-wrapper:hover .portfolio-card__image {
     margin: 0 3rem 3rem 0;
 }
 
@@ -845,17 +850,6 @@ section.breadcrumb-block {
     vertical-align: middle;
     transition: all .2s ease-in;
 }
-
-/* @media (min-width: 991.98px) {
-    .portfolio-card__image img {
-        max-width: 600px;
-        max-height: 480px;
-    }
-} */
-
-/* .portfolio-card__image-wrapper:hover .portfolio-card__image img {
-    transform: scale(1.04);
-} */
 
 .portfolio-card:nth-child(even) .portfolio-card__image::before {
     top: 0;
@@ -1002,7 +996,7 @@ section.breadcrumb-block {
     position: relative;
     color: var(--color-deep-indigo);
     transition: all .35s ease-in-out;
-    background: radial-gradient(circle, #ffffff 1%, #dbe9ff 100%);
+    background: radial-gradient(circle, #ffffff 1%, rgba(10, 133, 230, 0.1) 100%);
 }
 
 @media (min-width: 991.98px) {
@@ -1146,13 +1140,13 @@ section.breadcrumb-block {
     align-items: center;
     justify-content: center;
     font-weight: 500;
-    font-size: 1.6rem;
-    line-height: 1;
+    font-size: 1.75rem;
     padding: 0;
     width: 54px;
     height: 54px;
     background: var(--color-white);
     color: var(--color-vivid-blue);
+    line-height: 1;
 }
 
 .work-process__item-title {
@@ -1207,7 +1201,7 @@ section.breadcrumb-block {
 }
 
 .pricing-card:nth-child(odd) {
-    background-color: #f7faff;
+    background-color: #0a85e60c;
 }
 
 .pricing-card:hover {
@@ -1479,13 +1473,11 @@ section.breadcrumb-block {
     border: none !important;
 }
 
-.accordion-item:hover {}
-
 .accordion-header {
     cursor: pointer;
     align-items: center;
     appearance: none;
-    background: #f7faff;
+    background: #0a85e60c;
     border: none;
     color: var(--color-vivid-blue);
     display: flex;
@@ -1500,7 +1492,7 @@ section.breadcrumb-block {
 }
 
 .accordion-header:hover {
-    background: #eaf1fd;
+    background: #2498f01e;
 }
 
 .accordion__icon {
