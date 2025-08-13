@@ -246,10 +246,15 @@ banner_brif.addEventListener('mouseleave', () => {
 
 
 // ПРОСМОТР ОТЗЫВОВ
-const lightbox = GLightbox({
-  selector: '.glightbox',
-  touchNavigation: true,
-  keyboardNavigation: true,
-  loop: false,
-  zoomable: false,
+document.querySelectorAll('.portfolio-card .btn-transparent-b').forEach((btn, index) => {
+  const uniqueClass = `review-btn-${index}`;
+  btn.classList.add(uniqueClass);
+
+  GLightbox({
+    selector: `.${uniqueClass}`,
+    touchNavigation: false,
+    keyboardNavigation: false,
+    loop: false,
+    zoomable: false,
+  });
 });
