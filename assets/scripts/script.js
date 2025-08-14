@@ -265,9 +265,26 @@ function isFullyInViewport(el) {
 window.addEventListener('scroll', () => {
   targets.forEach(target => {
     if (isFullyInViewport(target)) {
-      target.classList.add('visible'); // элемент полностью виден
+      target.classList.add('visible');
     } else {
-      target.classList.remove('visible'); // элемент ушёл из области видимости
+      target.classList.remove('visible');
     }
+  });
+});
+
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    const offset = 100;
+    const bodyRect = document.body.getBoundingClientRect().top;
+    const targetRect = target.getBoundingClientRect().top;
+    const targetPosition = targetRect - bodyRect - offset;
+
+    window.scrollTo({
+      top: targetPosition,
+      behavior: 'smooth'
+    });
   });
 });
