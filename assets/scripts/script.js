@@ -65,7 +65,6 @@ document.querySelectorAll('.accordion-header').forEach(header => {
 });
 
 
-
 // ФОРМА ОБРАТНОЙ СВЯЗИ
 const element = document.getElementById('phone');
 const maskOptions = {

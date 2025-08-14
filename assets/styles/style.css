@@ -1879,7 +1879,7 @@ select:focus {
     height: 100%;
     top: 0;
     left: 0;
-    transition: all .35s linear;
+    transition:all .4s ease-in-out;
 }
 
 .banner-brif__row.hover::before {
