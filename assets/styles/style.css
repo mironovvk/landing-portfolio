@@ -900,7 +900,7 @@ section.breadcrumb-block {
     border-radius: 0;
     padding: 7px 11px;
     text-transform: uppercase;
-    font-size: .8rem;
+    font-size: 0.75rem;
     font-weight: 500;
     opacity: .95;
     z-index: 2;
@@ -1622,10 +1622,10 @@ section.breadcrumb-block {
     font-size: 1.25rem;
 }
 
-.contact-questions a.btn-default svg {
+/* .contact-questions a.btn-default svg {
     width: 30px;
     height: 30px;
-}
+} */
 
 .contact-questions__btns {
     display: flex;
@@ -2497,14 +2497,6 @@ select:focus {
 
     .portfolio-card__stack .portfolio-card__meta-label {
         margin-bottom: 8px;
-    }
-
-    .tags__item {
-        font-size: 8px;
-    }
-
-    .site-type__card .tags__item {
-        font-size: .8rem;
     }
 
     .portfolio-card__image img {
