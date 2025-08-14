@@ -35,10 +35,10 @@
                 <nav>
                     <ul class="topbar__widget">
                         <li>
-                            <a class="link-effect"  href="mailto: web@pl-llc.ru"> web@pl-llc.ru</a>
+                            <a class="link-effect" href="mailto: web@pl-llc.ru"> web@pl-llc.ru</a>
                         </li>
                         <li>
-                            <a class="link-effect"  href="tel:88006006254"> 8 (800) 600-62-54</a>
+                            <a class="link-effect" href="tel:88006006254"> 8 (800) 600-62-54</a>
                         </li>
                         <li>
                             <a class="link-effect" href="tel:+73512255221"> +7 (351) 225-52-21</a>
@@ -64,8 +64,9 @@
                 </div>
                 <div class="collapse navbar-collapse" id="collapseExample">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#" class="smooth-scroll active">Портфолио</a></li>
-                        <li><a href="https://www.programweb.studio/contacts/" class="smooth-scroll">Контакты</a></li>
+                        <li><a href="#" class="smooth-scroll link-effect active">Портфолио</a></li>
+                        <li><a href="https://www.programweb.studio/contacts/"
+                                class="smooth-scroll link-effect">Контакты</a></li>
                     </ul>
                 </div>
             </div>
@@ -107,7 +108,7 @@
             <div class="container">
                 <div class="row g-0">
                     <div class="section-title">
-                        <h2 class="ways_txt">Наши реализованные проекты</h2>
+                        <h2 class="ways_txt">Наши проекты</h2>
                         <p>Мы создаём современные и функциональные веб-решения, которые помогают нашим клиентам
                             достигать целей и выделяться на рынке. Здесь представлены работы, отражающие наш подход к
                             дизайну, разработке и продвижению</p>
@@ -533,8 +534,10 @@
                     <div class="banner__text-col">
                         <p>Есть идея или проект? Расскажите нам о них! Мы поможем представить ваш замысел аудитории: от
                             удобного интерфейса и фирменного дизайна до SEO- реализации и качественного контента.</p>
-                        <a href="https://www.programweb.studio/uploads/brif.docx" class="btn-default brif-btn mb-0"
-                            download="Бриф ProgramWeb">Скачать Бриф</a>
+                        <div class="btn-wrapper">
+                            <a href="https://www.programweb.studio/uploads/brif.docx" class="btn-default brif-btn mb-0"
+                                download="Бриф ProgramWeb">Скачать Бриф</a>
+                        </div>
                     </div>
                     <div class="banner__image-col">
                         <img width="560" height="561" loading="lazy" decoding="async"
@@ -544,37 +547,37 @@
                 </div>
             </div>
         </section>
-        <!-- блока преимуществ -->
+        <!-- блок преимуществ -->
         <section class="workflow">
             <div class="container">
                 <div class="row g-0">
                     <div class="section-title">
-                        <h2 class="ways_txt">Наши сильные стороны</h2>
+                        <h2 class="ways_txt">Наши преимущества</h2>
                         <p>Мы делаем упор на инновационные решения и индивидуальный подход, чтобы каждый проект был
                             уникальным и эффективно решал задачи бизнеса.</p>
                     </div>
                     <div class="workflow__wrapper">
-                        <div class="plate-item workflow__card" id="innovation">
+                        <div class="plate-item workflow__card">
                             <h3 class="plate-title">Современные технологии</h3>
                             <p class="plate-cont">
                                 Используем передовые инструменты и методики для создания качественных и эффективных
                                 продуктов.
                             </p>
                         </div>
-                        <div class="plate-item workflow__card" id="customization">
+                        <div class="plate-item workflow__card">
                             <h3 class="plate-title">Индивидуальный подход</h3>
                             <p class="plate-cont">
                                 Каждый проект адаптируем под конкретные цели и потребности клиента, обеспечивая
                                 максимальную отдачу.
                             </p>
                         </div>
-                        <div class="plate-item workflow__card" id="support">
+                        <div class="plate-item workflow__card">
                             <h3 class="plate-title">Поддержка и развитие</h3>
                             <p class="plate-cont">
                                 Обеспечиваем долгосрочное сопровождение и развитие проектов после их запуска.
                             </p>
                         </div>
-                        <div class="plate-item workflow__card" id="teamwork">
+                        <div class="plate-item workflow__card">
                             <h3 class="plate-title">Командная работа</h3>
                             <p class="plate-cont">
                                 Сплочённая команда специалистов гарантирует комплексный и профессиональный подход к
@@ -583,6 +586,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
         <!-- блок как мы работаем -->
         <section class="work-process bg-blue">
@@ -698,47 +702,52 @@
                     </div>
                     <div class="pricing-wrapper">
                         <div class="plate-item pricing-card">
-                            <h3 class="plate-title">Тариф «Под ключ»</h3>
+                            <h3 class="plate-title pricing-card__title">Тариф «Под ключ»</h3>
                             <div class="pricing-card__price">
                                 <span>от</span>
                                 45 000
                             </div>
-                            <div class="pricing-card__subtitle plate-cont">Включает в себя уже готовый типовой лендинг, который
+                            <div class="pricing-card__subtitle plate-cont">Включает в себя уже готовый типовой лендинг,
+                                который
                                 поможет привлечь новых клиентов, увеличить продажи и достичь поставленных целей.</div>
-                            <h4 class="list-title">Вот что вы получите:</h4>
-                            <ul class="pricing-card__features plate-cont">
-                                <li class="pricing-card__feature">Готовый лендинг в кратчайшие сроки</li>
-                                <li class="pricing-card__feature">Типовой дизайн с адаптивностью под мобильные
-                                    устройства</li>
-                                <li class="pricing-card__feature">Хостинг сайта на 1 год</li>
-                            </ul>
+                            <div>
+                                <h4 class="list-title">Вот что вы получите:</h4>
+                                <ul class="pricing-card__features plate-cont">
+                                    <li class="pricing-card__feature">Готовый лендинг в кратчайшие сроки</li>
+                                    <li class="pricing-card__feature">Типовой дизайн с адаптивностью под мобильные
+                                        устройства</li>
+                                    <li class="pricing-card__feature">Хостинг сайта на 1 год</li>
+                                </ul>
+                            </div>
                             <div class="pricing-card_btns">
                                 <a href="#feedback-form" class="bg-blue btn-default pricing-card_btn">Отправить
                                     заявку</a>
                             </div>
                         </div>
                         <div class="plate-item pricing-card">
-                            <h3 class="plate-title">Тариф «Индивидуальный»</h3>
+                            <h3 class="plate-title pricing-card__title">Тариф «Индивидуальный»</h3>
                             <div class="pricing-card__price">
                                 <span>от</span>
                                 120 000
                             </div>
                             <div class="pricing-card__subtitle plate-cont">Включает в себя создание сайта согласно Вашим
                                 пожеланиям. Разрабатываем уникальный дизайн, который будет подходить именно Вам.</div>
-                            <h4 class="list-title">Вот что вы получите:</h4>
-                            <ul class="pricing-card__features plate-cont">
-                                <li class="pricing-card__feature">Разработка индивидуального и адаптивного дизайна</li>
-                                <li class="pricing-card__feature">Возможность создания многостраничного сайта</li>
-                                <li class="pricing-card__feature">Настройка рекламного кабинета</li>
-                                <li class="pricing-card__feature">Хостинг сайта на 1 год</li>
-                            </ul>
+                            <div>
+                                <h4 class="list-title">Вот что вы получите:</h4>
+                                <ul class="pricing-card__features plate-cont">
+                                    <li class="pricing-card__feature">Разработка индивидуального и адаптивного дизайна
+                                    </li>
+                                    <li class="pricing-card__feature">Возможность создания многостраничного сайта</li>
+                                    <li class="pricing-card__feature">Хостинг сайта на 1 год</li>
+                                </ul>
+                            </div>
                             <div class="pricing-card_btns">
                                 <a href="#feedback-form" class="bg-blue btn-default pricing-card_btn">Отправить
                                     заявку</a>
                             </div>
                         </div>
                         <div class="plate-item pricing-card">
-                            <h3 class="plate-title">Тариф «Техподдержка»</h3>
+                            <h3 class="plate-title pricing-card__title">Тариф «Техподдержка»</h3>
                             <div class="pricing-card__price">
                                 <span>от</span>
                                 15 000
@@ -747,12 +756,14 @@
                                 Предусматривает полное техническое сопровождение сайта: контроль работы, устранение
                                 ошибок и помощь при необходимости.
                             </div>
-                            <h4 class="list-title">Вот что вы получите:</h4>
-                            <ul class="pricing-card__features plate-cont">
-                                <li class="pricing-card__feature">Мониторинг работоспособности сайта</li>
-                                <li class="pricing-card__feature">Оперативное устранение технических проблем</li>
-                                <li class="pricing-card__feature">Консультации по управлению сайтом</li>
-                            </ul>
+                            <div>
+                                <h4 class="list-title">Вот что вы получите:</h4>
+                                <ul class="pricing-card__features plate-cont">
+                                    <li class="pricing-card__feature">Мониторинг работоспособности сайта</li>
+                                    <li class="pricing-card__feature">Оперативное устранение технических проблем</li>
+                                    <li class="pricing-card__feature">Консультации по управлению сайтом</li>
+                                </ul>
+                            </div>
                             <div class="pricing-card_btns">
                                 <a href="#feedback-form" class="bg-blue btn-default pricing-card_btn">Отправить
                                     заявку</a>
@@ -852,7 +863,6 @@
                 </div>
             </div>
         </section>
-        <!-- блок факьюс -->
         <section>
             <div class="container">
                 <div class="row g-0">
@@ -862,10 +872,10 @@
                             просмотра портфолио. Возможно, вы найдёте здесь ответ и на свой.</p>
                     </div>
                     <div class="accordion">
-                        <div class="accordion-item">
-                            <h4 class="accordion-header active">Сколько стоит разработка сайта и от чего зависит
+                        <div class="accordion-item active">
+                            <h4 class="accordion-header">Сколько стоит разработка сайта и от чего зависит
                                 цена?<span class="accordion__icon"></span></h4>
-                            <div class="accordion-content active">
+                            <div class="accordion-content plate-item">
                                 <div class="inner-wrapper">
                                     Стоимость разработки рассчитывается индивидуально и зависит от типа сайта (лендинг,
                                     корпоративный, интернет-магазин), его функционала, дизайна и сроков. Мы всегда
@@ -877,7 +887,7 @@
                         <div class="accordion-item">
                             <h4 class="accordion-header">Сколько времени занимает создание сайта?<span
                                     class="accordion__icon"></span></h4>
-                            <div class="accordion-content">
+                            <div class="accordion-content plate-item">
                                 <div class="inner-wrapper">
                                     <p>Средний срок разработки — от 3 до 8 недель. На скорость влияет сложность проекта,
                                         количество уникальных страниц, необходимость интеграций и согласований дизайна.
@@ -891,7 +901,7 @@
                         <div class="accordion-item">
                             <h4 class="accordion-header">Делаете ли вы адаптивную верстку и оптимизацию под мобильные
                                 устройства?<span class="accordion__icon"></span></h4>
-                            <div class="accordion-content">
+                            <div class="accordion-content plate-item">
                                 <div class="inner-wrapper">
                                     <p>Да, все сайты мы разрабатываем по принципу mobile-first. Это значит, что сначала
                                         проектируется мобильная версия, а затем адаптация для планшетов и десктопа.</p>
@@ -904,7 +914,7 @@
                         <div class="accordion-item">
                             <h4 class="accordion-header">Можно ли заказать редизайн или доработку существующего
                                 сайта?<span class="accordion__icon"></span></h4>
-                            <div class="accordion-content">
+                            <div class="accordion-content plate-item">
                                 <div class="inner-wrapper">
                                     <p>Да, мы проводим редизайн и доработку существующих сайтов. Это может быть полное
                                         обновление дизайна, добавление новых страниц, внедрение современных технологий и
@@ -918,7 +928,7 @@
                         <div class="accordion-item">
                             <h4 class="accordion-header">Предоставляете ли вы техническую поддержку после запуска
                                 сайта?<span class="accordion__icon"></span></h4>
-                            <div class="accordion-content">
+                            <div class="accordion-content plate-item">
                                 <div class="inner-wrapper">
                                     <p>Да, мы предлагаем разные пакеты поддержки. Это может быть минимальный пакет с
                                         исправлением ошибок и обновлением контента или комплексное сопровождение с
@@ -931,7 +941,7 @@
                         <div class="accordion-item">
                             <h4 class="accordion-header">Разрабатываете ли вы сайты с системой управления (CMS)?<span
                                     class="accordion__icon"></span></h4>
-                            <div class="accordion-content">
+                            <div class="accordion-content plate-item">
                                 <div class="inner-wrapper">
                                     <p>Да, мы работаем с популярными CMS, такими как WordPress и 1C-Bitrix, а также
                                         создаём собственные панели управления для индивидуальных проектов.</p>
@@ -944,7 +954,7 @@
                         <div class="accordion-item">
                             <h4 class="accordion-header">Можно ли интегрировать сайт с CRM, платёжными системами или
                                 другими сервисами?<span class="accordion__icon"></span></h4>
-                            <div class="accordion-content">
+                            <div class="accordion-content plate-item">
                                 <div class="inner-wrapper">
                                     <p>Да, мы интегрируем сайты с CRM (amoCRM, Bitrix24), подключаем онлайн-оплаты,
                                         формы заявок, мессенджеры и сервисы аналитики. Это автоматизирует
@@ -1034,7 +1044,7 @@
                                 <p id="errors_formCallback" class="modals__message modals__message-errors"></p>
                                 <div class="feedback-form__group">
                                     <label for="full_name" class="feedback-form__label">ФИО<span
-                                            class="form__required">*</span></label>
+                                            class="form__required"> *</span></label>
                                     <input type="text" class="feedback-form__control" id="full_name" name="clientName"
                                         placeholder="Семен Семенович Горбунков" minlength="10" maxlength="100"
                                         data-type="full_name" required>
@@ -1046,30 +1056,30 @@
                                 <div class="feedback-form__fields">
                                     <div class="feedback-form__group">
                                         <label for="phone" class="feedback-form__label">Телефон<span
-                                                class="form__required">*</span></label>
+                                                class="form__required"> *</span></label>
                                         <input type="tel" class="feedback-form__control" id="phone" name="clientPhone"
                                             placeholder="+7 999 999-99-99" maxlength="18" data-type="phone" required>
 
                                         <div class="hs-error-msgs">
-                                            <label class="error" for="phone">Укажите номер телефона в формате +7 999
+                                            <label class="error" for="phone">Укажите номер в формате +7 999
                                                 999-99-99</label>
                                         </div>
                                     </div>
                                     <div class="feedback-form__group">
                                         <label for="email" class="feedback-form__label">E-mail<span
-                                                class="form__required">*</span></label>
+                                                class="form__required"> *</span></label>
                                         <input type="email" class="feedback-form__control" id="email" name="clientEmail"
                                             placeholder="usermail@mailservice.com" minlength="5" maxlength="100"
                                             data-type="email" required>
 
                                         <div class="hs-error-msgs">
-                                            <label class="error" for="email">Укажите адрес электронной почты</label>
+                                            <label class="error" for="email">Укажите корректный адрес электронной почты</label>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="feedback-form__group">
                                     <label for="topic" class="feedback-form__label">Тема обращения<span
-                                            class="form__required">*</span></label>
+                                            class="form__required"> *</span></label>
                                     <select class="feedback-form__control" name="clientSubject" id="topic"
                                         data-type="select" required>
                                         <option value="" disabled selected>Выберите тему обращения</option>
@@ -1086,7 +1096,7 @@
                                 </div>
                                 <div class="feedback-form__group ">
                                     <label for="message" class="feedback-form__label">Сообщение<span
-                                            class="form__required">*</span></label>
+                                            class="form__required"> *</span></label>
                                     <textarea id="message" name="clientMessage" class="feedback-form__control"
                                         placeholder="Напишите текст обращения" minlength="10" maxlength="1000"
                                         data-type="message" required></textarea>

@@ -116,6 +116,7 @@ body {
 main {
     min-height: 0;
     flex-grow: 1;
+    margin-top: 71px;
 }
 
 main>section {
@@ -188,7 +189,7 @@ a {
     background-image: linear-gradient(to right, currentcolor 0, currentcolor 100%), linear-gradient(to right, #ffffffa6 0, #ffffffa6 100%);
 
     text-decoration: none;
-    transition: all .2s ease;
+    transition: all .3s ease;
     width: fit-content;
 }
 
@@ -246,7 +247,7 @@ a {
     text-decoration: none;
     letter-spacing: .4px;
     gap: .5rem;
-    transition: all 0.2s ease;
+    transition: all 0.6s ease;
 }
 
 .bg-blue {
@@ -404,7 +405,8 @@ a {
 }
 
 .topbar__widget a {
-    transition: all cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+    font-size: .9rem;
+    transition: all cubic-bezier(0.645, 0.045, 0.355, 1) 0.35s;
     text-decoration: none;
     color: var(--color-white);
     background-image: linear-gradient(to right, currentcolor 0, currentcolor 100%), linear-gradient(to right, var(--footer-bg-color) 0, var(--footer-bg-color) 100%);
@@ -457,11 +459,12 @@ header.header__wrapper:not(.header_scrolled) .header-row {
     color: var(--color-white);
     top: 0 !important;
     opacity: .85;
-    box-shadow: 0 5px 10px 1px #00000033;
+    box-shadow: 0 5px 30px 1px #0000007c;
 }
 
 .header__wrapper.header_scrolled .smooth-scroll {
     color: var(--color-white);
+    background-image: linear-gradient(to right, currentcolor 0, currentcolor 100%), linear-gradient(to right, #1e73be 0, #1e73be 100%);
 }
 
 .header__wrapper:not(.header_scrolled) .smooth-scroll.active {
@@ -589,18 +592,18 @@ ul.navbar-nav {
 
 /* Стили первого блока */
 section.breadcrumb-block {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    padding-top: 2rem;
+    padding: 0;
+    margin: 0;
+    padding: 20px 0;
 }
 
 .breadcrumb {
+    font-size: 1rem;
     padding: 0;
-    margin-bottom: 1rem;
+    margin: 0 !important;
 }
 
 .breadcrumb-item {
-    font-size: .95em;
     font-weight: 400;
 }
 
@@ -618,7 +621,7 @@ section.breadcrumb-block {
     background-image: linear-gradient(to right, currentcolor 0, currentcolor 100%), linear-gradient(to right, var(--color-vivid-blue) 0, var(--color-vivid-blue) 100%);
 
     text-decoration: none;
-    transition: all .2s ease;
+    transition: all .35s ease;
     width: fit-content;
 }
 
@@ -650,8 +653,8 @@ section.breadcrumb-block {
 }
 
 .l-section-kbs {
-    padding-top: 0;
-    padding-bottom: 2.6rem;
+    padding: 50px 0;
+    margin: 0;
 }
 
 .l-section-kbs .h1,
@@ -697,14 +700,13 @@ section.breadcrumb-block {
 
 /* стили блока портфолио */
 .portfolio-block {
-    margin-top: 40px;
     padding: 70px 0;
 }
 
 .portfolio-container {
     display: flex;
     flex-direction: column;
-    row-gap: 4rem;
+    row-gap: 96px;
     counter-reset: portfolio_card;
 }
 
@@ -736,7 +738,6 @@ section.breadcrumb-block {
     color: rgba(30, 115, 190, .035);
     content: "0" counter(portfolio_card);
     position: absolute;
-    font-family: var(--font-main);
     font-size: 19rem;
     font-weight: 600;
     min-width: 386px;
@@ -744,6 +745,11 @@ section.breadcrumb-block {
     left: 30%;
     z-index: -10;
     transform: translateY(-50%) translateX(-50%);
+    transition: all .35s ease;
+}
+
+.portfolio-card__body-inner:hover::before {
+    color: rgba(30, 115, 190, 0.075);
 }
 
 .portfolio-card__title {
@@ -811,15 +817,7 @@ section.breadcrumb-block {
     /* width: 100%; */
     height: 100%;
     margin: 1.5rem 1.5rem 0;
-    transition: all .2s ease;
-}
-
-.portfolio-card__image-wrapper:hover .portfolio-card__image {
-    margin: 0 0 1.5rem 3rem;
-}
-
-.portfolio-card:nth-child(even) .portfolio-card__image-wrapper:hover .portfolio-card__image {
-    margin: 0 3rem 1.5rem 0;
+    transition: all .35s ease;
 }
 
 .portfolio-card__image::before {
@@ -859,7 +857,7 @@ section.breadcrumb-block {
     gap: 10px;
     list-style: none;
     padding: 0;
-    margin: 1rem 0 0 1rem;
+    margin: 17px 20px;
     z-index: 1000;
 }
 
@@ -1004,15 +1002,10 @@ section.breadcrumb-block {
     }
 }
 
-.workflow__card:hover {
-    transform: scale(1.04);
-}
-
 .workflow__card::before {
     color: rgba(30, 115, 190, 0.085);
     content: "0" counter(work_card);
     position: absolute;
-    font-family: var(--font-main);
     max-width: 100px;
     font-size: 6rem;
     font-weight: 600;
@@ -1022,6 +1015,11 @@ section.breadcrumb-block {
     transform: translateY(-50%) translateX(-50%);
     display: flex;
     align-items: center;
+    transition: all .35s ease;
+}
+
+.workflow__card:hover::before {
+    color: rgba(30, 115, 190, 0.2);
 }
 
 .workflow__card:hover::before {
@@ -1144,10 +1142,6 @@ section.breadcrumb-block {
     transition: transform .2s ease;
 }
 
-.work-process__item:hover .work-process__num {
-    transform: scale(1.1);
-}
-
 .work-process__item-title {
     margin-right: .4rem;
     margin-bottom: 0;
@@ -1184,6 +1178,7 @@ section.breadcrumb-block {
     justify-content: start;
     align-items: center;
     position: relative;
+    row-gap: 1rem;
     color: var(--color-deep-indigo);
     transition: all .2s ease-in;
     z-index: 1;
@@ -1201,12 +1196,16 @@ section.breadcrumb-block {
 }
 
 .pricing-card:nth-child(even) {
+    z-index: 2;
+    transform: scale(1.02);
     box-shadow: 2px 0 35px 0 rgba(10, 133, 230, 0.075);
 }
 
+.pricing-card:hover {
+    box-shadow: 2px 0 35px 0 #4458901f;
+}
+
 .pricing-card__title {
-    padding-bottom: 0;
-    margin-bottom: 40px;
     text-align: center;
 }
 
@@ -1220,7 +1219,6 @@ section.breadcrumb-block {
     flex-wrap: wrap;
     color: var(--color-vivid-blue);
     vertical-align: middle;
-    margin-bottom: 1rem;
 }
 
 .pricing-card__price * {
@@ -1239,24 +1237,27 @@ section.breadcrumb-block {
 
 .pricing-card__subtitle:not(.list-title) {
     text-align: center;
-    margin-bottom: 1rem;
 }
 
 .list-title {
     width: 100%;
-    margin-bottom: 1rem;
     font-weight: 600;
     height: auto;
     text-align: center;
+}
+
+.pricing-card .list-title {
+    margin-top: 1rem;
+    margin-bottom: .4rem;
 }
 
 .pricing-card__features {
     margin-bottom: 40px;
 }
 
-
 .pricing-card ul {
     margin-left: 30px;
+    margin-bottom: 0;
     padding-left: 0;
     list-style: none;
 }
@@ -1276,6 +1277,7 @@ section.breadcrumb-block {
 
 .pricing-card ol {
     margin-left: 5px;
+    margin-bottom: 0;
     list-style: none;
     counter-reset: li;
     padding-left: 2rem;
@@ -1311,6 +1313,7 @@ section.breadcrumb-block {
     align-items: center;
     align-self: stretch;
     height: 100%;
+    margin-top: 1rem;
 }
 
 .pricing-card_btn {
@@ -1346,7 +1349,7 @@ section.breadcrumb-block {
     background-size: cover;
     background-position: center;
     background-color: var(--color-white);
-    transition: all .3s ease-in;
+    transition: all .6s ease-in;
 }
 
 .site-type__card::before {
@@ -1355,11 +1358,7 @@ section.breadcrumb-block {
     inset: 0;
     background-color: var(--color-white);
     z-index: 0;
-    transition: background-color 0.3s ease;
-}
-
-.site-type__card:hover {
-    transform: scale(1.02);
+    transition: background-color 0.6s ease;
 }
 
 .site-type__card:hover:before {
@@ -1440,17 +1439,20 @@ section.breadcrumb-block {
 /* СТИЛИ ДЛЯ АККОРДЕОНА ВОПРОС ОТВЕТ */
 .accordion {
     width: 75%;
-    margin: auto;
-    padding-left: 0;
-    padding-right: 0;
+    margin: 0 auto;
+    padding: 0;
 }
 
 .accordion-item {
     border: none !important;
 }
 
+.accordion-item.active:not(:last-child) {
+    margin-bottom: 0;
+}
+
 .accordion-item:not(:last-child) {
-    margin: 0 auto 1rem;
+    margin-bottom: 1rem;
 }
 
 .accordion-header {
@@ -1463,7 +1465,7 @@ section.breadcrumb-block {
     display: flex;
     font-weight: 700;
     font-size: 1.2rem;
-    padding: 1rem 3.4rem 1rem 2rem;
+    padding: 1.2rem 3.4rem 1.2rem 2rem;
     position: relative;
     text-align: left;
     width: 100%;
@@ -1485,14 +1487,9 @@ section.breadcrumb-block {
     transition: transform 0.3s ease;
 }
 
-.accordion-header.active .accordion__icon {
+.accordion-item.active .accordion__icon {
     transform: translateY(-50%) rotate(45deg);
 }
-
-/* .accordion-header:not(.active):hover .accordion__icon {
-    transform: translateY(-50%) rotate(25deg);
-} */
-
 
 .accordion__icon::before,
 .accordion__icon::after {
@@ -1524,11 +1521,10 @@ section.breadcrumb-block {
     transition: max-height 0.2s ease, opacity 0.2s ease;
 }
 
-.accordion-content.active {
+.accordion-item.active .accordion-content {
     display: block;
     max-height: 500px;
     opacity: 1;
-    padding: 1rem 2rem;
 }
 
 .accordion-content p:not(:first-child) {
@@ -1592,8 +1588,10 @@ section.breadcrumb-block {
     margin: 70px 0;
     background-color: #0a85e60c;
 }
+
 .contact-questions a.btn-default {
     text-transform: none;
+    font-size: 1.25rem;
 }
 
 .contact-questions a.btn-default svg {
@@ -1616,18 +1614,12 @@ section.breadcrumb-block {
     padding-bottom: 60px;
 }
 
-.form-container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: start;
-    align-items: center;
+.feedback-block .section-title {
+    max-width: 100%;
+}
 
-    padding: 0;
+.form-container {
     margin: 0 auto;
-    border: 0 solid #d5d9e4;
-    border-radius: 2px;
-    list-style: none;
 }
 
 .feedback-form {
@@ -1649,6 +1641,7 @@ section.breadcrumb-block {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 1rem;
+    grid-row-gap: 1.85rem;
 }
 
 .captcha-fields {
@@ -1718,7 +1711,7 @@ section.breadcrumb-block {
 
     appearance: none;
     background-color: var(--color-white);
-    border: 1px solid #0009;
+    border: .1rem solid #0009;
     border-radius: .3rem;
     box-shadow: none;
 
@@ -1728,7 +1721,6 @@ section.breadcrumb-block {
 .feedback-form__control:focus {
     background-color: var(--color-white);
     border-color: var(--color-vivid-blue);
-    box-shadow: 2px 0 35px 0 #4458901f;
     outline: none;
 }
 
@@ -1851,7 +1843,6 @@ select:focus {
 
 .banner-brif__row::before {
     content: "";
-    /* background: radial-gradient(circle, #3d9be9 0%, #1d7ecf 100%); */
     background: var(--color-vivid-blue);
     opacity: .90;
     position: absolute;
@@ -1860,7 +1851,7 @@ select:focus {
     height: 100%;
     top: 0;
     left: 0;
-    transition: all .25s linear;
+    transition: all .35s linear;
 }
 
 .banner-brif__row.hover::before {
@@ -1874,16 +1865,15 @@ select:focus {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    row-gap: 1rem;
+    row-gap: 2rem;
     position: relative;
     z-index: 10;
 }
 
 .banner__text-col p {
-    font-size: 1.375rem;
-    font-weight: 500;
-    margin-top: 0;
-    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    /* font-weight: 500; */
 }
 
 .banner__image-col {
@@ -1904,7 +1894,9 @@ select:focus {
     border-radius: 0 .15rem .15rem 0;
 }
 
-
+.banner-brif .btn-wrapper {
+    justify-content: start;
+}
 
 
 
@@ -2078,12 +2070,13 @@ select:focus {
 
 /* Большие устройства (десктопы, менее 1200px) */
 @media (max-width: 1199.98px) {
+
     .bg-blue .h1,
     .bg-blue h1 {
         font-size: calc(1.4625rem + 2.55vw);
     }
 
-    .portfolio-card .portfolio-card__btns{
+    .portfolio-card .portfolio-card__btns {
         column-gap: .4rem;
     }
 
@@ -2091,12 +2084,8 @@ select:focus {
         font-size: 2.25rem;
     }
 
-    .pricing-card__title {
-        margin-bottom: 20px;
-    }
 
     .pricing-card__price {
-        margin-bottom: 20px;
         font-size: 2.6rem;
     }
 
@@ -2193,12 +2182,10 @@ select:focus {
         padding-right: 0;
     }
 
-    .portfolio-card__image-wrapper {
-        padding: 1rem 1rem 1rem 0;
-    }
-
+    .portfolio-card__image-wrapper,
     .portfolio-card:nth-child(even) .portfolio-card__image-wrapper {
-        padding: 1rem 0 1rem 1rem;
+        margin-top: .5rem;
+        padding: 0;
     }
 
     .portfolio-card__body-inner::before,
@@ -2208,7 +2195,7 @@ select:focus {
     }
 
     .portfolio-card__image {
-        width: 100%;
+        max-width: 100%;
         margin: 0;
     }
 
@@ -2223,6 +2210,10 @@ select:focus {
     .choose-variant:after {
         width: 1250px;
         height: 540px;
+    }
+
+    .pricing-wrapper {
+        row-gap: 48px;
     }
 
     .pricing-card__price {
@@ -2264,7 +2255,7 @@ select:focus {
 
     .banner-brif__row {
         flex-direction: column-reverse;
-        background: radial-gradient(circle, #3d9be9 0%, #1d7ecf 100%);
+        background: var(--color-vivid-blue);
     }
 
     .banner-brif__row::before {
@@ -2448,7 +2439,7 @@ select:focus {
     }
 
     .feedback-form__fields {
-        display: block;
+        grid-template-columns: 1fr;
     }
 
     .web-variant {
@@ -2468,6 +2459,10 @@ select:focus {
 
 /* Очень маленькие устройства (портретные телефоны, менее 576px) */
 @media (max-width: 575.98px) {
+    .workflow__card:nth-child(2n+1)::before {
+        left: 22%;
+    }
+
     .portfolio-card__stack {
         grid-template-columns: 1fr;
     }

@@ -3,6 +3,10 @@
 //   window.scrollTo(0, 0);
 // });
 
+// Вызываем setHeaderOffset при загрузке страницы и при изменении размера окна
+window.addEventListener('load', setHeaderOffset);
+window.addEventListener('resize', setHeaderOffset);
+
 const topbar = document.getElementById('topbar');
 const header = document.getElementById('header');
 
@@ -14,10 +18,6 @@ function setHeaderOffset() {
   let topbarHeight = topbar.offsetHeight;
   header.style.top = `${topbarHeight}px`;
 }
-
-// Вызываем setHeaderOffset при загрузке страницы и при изменении размера окна
-window.addEventListener('load', setHeaderOffset);
-window.addEventListener('resize', setHeaderOffset);
 
 // Отслеживаем прокрутку страницы
 window.addEventListener('scroll', () => {
@@ -59,10 +59,8 @@ const swiper = new Swiper(".mySwiper", {
 // БЛОК С АККОРДЕОНОМ
 document.querySelectorAll('.accordion-header').forEach(header => {
   header.addEventListener('click', () => {
-    const content = header.nextElementSibling;
-
-    header.classList.toggle('active');
-    content.classList.toggle('active');
+    const item = header.closest('.accordion-item');
+    item.classList.toggle('active');
   });
 });
 
@@ -188,10 +186,7 @@ form.addEventListener("submit", (e) => {
   }
 
   // если всё прошло, показываем данные в консоли и отправляем через fetch
-  // console.log("Данные формы:", Object.fromEntries(formData.entries()));
-
-  const recaptchaResponse = document.getElementById("g-recaptcha-response").value;
-  formData.append("g-recaptcha-response", recaptchaResponse);
+  console.log("Данные формы:", Object.fromEntries(formData.entries()));
 
   fetch('https://www.programweb.studio/contacts.php', {
     method: form.method,
@@ -225,7 +220,7 @@ form.addEventListener("submit", (e) => {
     .catch((err) => {
       showSuccessMessage(err.message || "Произошла ошибка при отправке. Попробуйте позже.", 'error');
       form.querySelector("#errors_formCallback").style.display = 'flex';
-      form.querySelector("#errors_formCallback").innerHTML = 'Произошла ошибка при отправке. Попробуйте позже.' + err.message;
+      form.querySelector("#errors_formCallback").innerHTML = 'Не удалось отправить данные формы.' + err.message;
     });
 
 });
