@@ -748,8 +748,8 @@ section.breadcrumb-block {
     transition: all .35s ease;
 }
 
-.portfolio-card__body-inner:hover::before {
-    color: rgba(30, 115, 190, 0.075);
+.portfolio-card.visible .portfolio-card__body-inner::before {
+    color: rgba(30, 115, 190, 0.085);
 }
 
 .portfolio-card__title {
@@ -807,11 +807,13 @@ section.breadcrumb-block {
 .portfolio-card__image-wrapper {
     max-width: 100%;
     position: relative;
+    overflow: hidden;
     top: 0;
     transition: all .3s ease-in;
 }
 
 .portfolio-card__image {
+    /* position: relative; */
     overflow: hidden;
     max-width: 600px;
     /* width: 100%; */
@@ -831,6 +833,32 @@ section.breadcrumb-block {
     right: 0;
     z-index: -1;
     background-color: rgb(30, 115, 190, .02);
+}
+
+.portfolio-card__image-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 20%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.6) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+    transform: skewX(-25deg);
+}
+
+.portfolio-card__image-wrapper:hover::before {
+    
+    animation: shine .8s ease forwards;
+}
+
+@keyframes shine {
+    100% {
+        left: 125%;
+    }
 }
 
 .portfolio-card__image img {

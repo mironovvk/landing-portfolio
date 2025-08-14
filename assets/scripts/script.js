@@ -240,7 +240,8 @@ banner_brif.addEventListener('mouseleave', () => {
 
 
 
-// ПРОСМОТР ОТЗЫВОВ
+// КАРТОЧКИ ПОРТФОЛИО
+// просмотр отзывов
 document.querySelectorAll('.portfolio-card .btn-transparent-b').forEach((btn, index) => {
   const uniqueClass = `review-btn-${index}`;
   btn.classList.add(uniqueClass);
@@ -251,5 +252,23 @@ document.querySelectorAll('.portfolio-card .btn-transparent-b').forEach((btn, in
     keyboardNavigation: false,
     loop: false,
     zoomable: false,
+  });
+});
+
+// номер карточки при фокусе на экране
+const targets = document.querySelectorAll('.portfolio-card');
+
+function isFullyInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return rect.top >= 0 && rect.bottom <= window.innerHeight;
+}
+
+window.addEventListener('scroll', () => {
+  targets.forEach(target => {
+    if (isFullyInViewport(target)) {
+      target.classList.add('visible'); // элемент полностью виден
+    } else {
+      target.classList.remove('visible'); // элемент ушёл из области видимости
+    }
   });
 });
